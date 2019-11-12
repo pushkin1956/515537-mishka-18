@@ -35,8 +35,21 @@
   <main class="page-main">
     <h1 class="page-main__title">Вязание на заказ</h1>
     <p class="page-main__description">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
-    <form class="page-main__form form">
-      <!--Здесь будет форма-->
+    <form class="page-main__form form" action="https://echo.htmlacademy.ru" method="post">
+      <fieldset class="form__fieldset">
+        <legend>Тип</legend>
+        <ul class="form__list">
+          <li class="form__option">
+            <input type="radio" name="type" id="type-accessory" value="accessory">
+            <label for="type-accessory">Аксессуар для интерьера</label>
+          </li>
+          <li class="form__option">
+            <input type="radio" name="type" id="type-toy" value="toy">
+            <label for="type-toy">Детская игрушка</label>
+          </li>
+        </ul>
+      </fieldset>
+
     </form>
   </main>
 
