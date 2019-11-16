@@ -3,21 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <title>Интернет магазин «Мишка»</title>
+  <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
   <header class="page-header">
     <nav class="main-nav">
       <a class="page-header__logo">
-        <img class="page-header__logo-image" src="https://via.placeholder.com/150x150" width="86" height="35" alt="Логотип интернет магазина «Мишка»">
+        <img class="page-header__logo-image" src="img/logo-mobile.svg" width="86" height="35" alt="Логотип интернет магазина «Мишка»">
       </a>
       <button class="main-nav__toggle" type="button">Открыть меню</button>
       <div class="main-nav__wrapper">
         <ul class="main-nav__list site-list">
           <li class="site-list__item">
-            <a href="catalog.html">Каталог товаров</a>
+            <a class="main-nav__link" href="catalog.html">Каталог товаров</a>
           </li>
           <li class="site-list__item">
-            <a href="form.html">Вязание на заказ</a>
+            <a class="main-nav__link" href="form.html">Вязание на заказ</a>
           </li>
         </ul>
         <form class="main-nav__list search-form" action="https://echo.htmlacademy.ru" method="get">
@@ -25,7 +26,7 @@
         </form>
         <ul class="main-nav__list user-list">
           <li class="user-list__item">
-            <a href="cart.html">Корзина:пока пуста</a>
+            <a class="main-nav__link" href="cart.html">Корзина: пока пуста</a>
           </li>
         </ul>
       </div>
@@ -82,7 +83,7 @@
           </td>
         </tr>
       </table>
-      <img class="product-week__image" src="https://via.placeholder.com/150x150" width="260" height="315" alt="Изображение вязаных корзинок">
+      <img class="product-week__image" src="img/triple-set-mobile@1x.jpg" width="260" height="315" alt="Изображение вязаных корзинок">
       <p class="product-week__price">Цена: 990 руб.</p>
       <button class="product-week__order" type="button">Заказать</button>
     </section>
@@ -91,22 +92,22 @@
       <h2 class="write-us__title">Коротко о нас:</h2>
       <ul class="write-us__list">
         <li class="write-us__item write-us__item--flower">
-          <p class="write-us__title">Экологически чистые материалы</p>
+          <p class="write-us__item-title">Экологически чистые материалы</p>
         </li>
         <li class="write-us__item write-us__item--cash">
-          <p class="write-us__title">Скандинавский стиль по российской цене</p>
+          <p class="write-us__item-title">Скандинавский стиль по российской цене</p>
         </li>
         <li class="write-us__item write-us__item--heart">
-          <p class="write-us__title">Увеличивает лайки на фотографиях</p>
+          <p class="write-us__item-title">Увеличивает лайки на фотографиях</p>
         </li>
         <li class="write-us__item write-us__item--clew">
-          <p class="write-us__title">Связано вручную с любовью и умилением</p>
+          <p class="write-us__item-title">Связано вручную с любовью и умилением</p>
         </li>
         <li class="write-us__item write-us__item--rocket">
-          <p class="write-us__title">Поддержка отечественного производителя</p>
+          <p class="write-us__item-title">Поддержка отечественного производителя</p>
         </li>
         <li class="write-us__item write-us__item--present">
-          <p class="write-us__title">Поставляется в подарочной упаковке</p>
+          <p class="write-us__item-title">Поставляется в подарочной упаковке</p>
         </li>
       </ul>
     </section>
@@ -150,7 +151,7 @@
           </td>
         </tr>
       </table>
-      <a class ="contacts__map" href="#"><img src="https://via.placeholder.com/150x150" width="320" height="457" alt="Интернет магазин «Мишка» расположен по адресу г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101"></a>
+      <a class ="contacts__map" href="#"><img src="img/map-mobile@1x.jpg" width="320" height="457" alt="Интернет магазин «Мишка» расположен по адресу г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101"></a>
       <a class="button сontacts__button-feedback" href="feedback-form.html">Напишите нам</a>
     </section>
   </main>
@@ -178,7 +179,7 @@
   </footer>
 
   <!--попапы-->
-  <section class="modal cart-add">
+  <section class="modal cart-add visually-hidden">
     <h2 class="cart-add__title">Добавить в корзину</h2>
     <form class="cart-add__form" action="https://echo.htmlacademy.ru" method="get">
       <fieldset class="cart-add__choice choice">

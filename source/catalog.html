@@ -3,21 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <title>Каталог товаров. Интернет магазин «Мишка»</title>
+  <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
   <header class="page-header">
     <nav class="main-nav">
       <a class="page-header__logo" href="index.html">
-        <img class="page-header__logo-image" src="https://via.placeholder.com/150x150" width="86" height="35" alt="Логотип интернет магазина «Мишка»">
+        <img class="page-header__logo-image" src="img/logo-mobile.svg" width="86" height="35" alt="Логотип интернет магазина «Мишка»">
       </a>
       <button class="main-nav__toggle" type="button">Открыть меню</button>
       <div class="main-nav__wrapper">
         <ul class="main-nav__list site-list">
           <li class="site-list__item">
-            <a href="catalog.html">Каталог товаров</a>
+            <a class="main-nav__link" href="catalog.html">Каталог товаров</a>
           </li>
           <li class="site-list__item">
-            <a href="form.html">Вязание на заказ</a>
+            <a class="main-nav__link" href="form.html">Вязание на заказ</a>
           </li>
         </ul>
         <form class="main-nav__list search-form" action="https://echo.htmlacademy.ru" method="get">
@@ -25,21 +26,21 @@
         </form>
         <ul class="main-nav__list user-list">
           <li class="user-list__item">
-            <a href="cart.html">Корзина:пока пуста</a>
+            <a class="main-nav__link" href="cart.html">Корзина: пока пуста</a>
           </li>
         </ul>
       </div>
     </nav>
   </header>
 
-  <main class="page-main">
-    <h1 class="page-main__title">Каталог товаров</h1>
+  <main class="page-main-catalog">
+    <h1 class="page-main-catalog__title">Каталог товаров</h1>
     <section class="catalog">
       <h2 class="visually-hidden">Список товаров</h2>
       <ul class="catalog__list">
         <li class="catalog__item item">
           <a class="item__link">
-            <img class="item__image" src="https://via.placeholder.com/150x150" width="260" height="195" alt="Фотография игрушки Зайчик-попрыгайчик">
+            <img class="item__image" src="img/photo-hare-mobile@1x.jpg" width="260" height="195" alt="Фотография игрушки Зайчик-попрыгайчик">
             <h3 class="item__title">Зайчик-попрыгайчик</h3>
             <p class="item__description">Рост 30 см, вес 200 г</p>
             <b class="item__price">1 200 руб.</b>
@@ -47,7 +48,7 @@
         </li>
         <li class="catalog__item item">
           <a class="item__link">
-            <img class="item__image" src="https://via.placeholder.com/150x150" width="260" height="195" alt="Фотография вязаной корзинки для белья">
+            <img class="item__image" src="img/photo-bowl-mobile@1x.jpg" width="260" height="195" alt="Фотография вязаной корзинки для белья">
             <h3 class="item__title">Корзинка для белья</h3>
             <p class="item__description">Диаметр 15 см, высота 10 см</p>
             <b class="item__price">690 руб.</b>
@@ -55,7 +56,7 @@
         </li>
         <li class="catalog__item item">
           <a class="item__link">
-            <img class="item__image" src="https://via.placeholder.com/150x150" width="260" height="195" alt="Фотография большой вязаной корзинки для игрушек">
+            <img class="item__image" src="img/photo-toys-mobile@1x.jpg" width="260" height="195" alt="Фотография большой вязаной корзинки для игрушек">
             <h3 class="item__title">Большая корзинка для игрушек</h3>
             <p class="item__description">Диаметр 30 см, высота 30 см</p>
             <b class="item__price">1 500 руб.</b>
@@ -99,7 +100,7 @@
   </footer>
 
   <!--попапы-->
-  <section class="modal cart-add">
+  <section class="modal cart-add visually-hidden">
     <h2 class="cart-add__title">Добавить в корзину</h2>
     <form class="cart-add__form" action="https://echo.htmlacademy.ru" method="get">
       <fieldset class="cart-add__choice choice">
