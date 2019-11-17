@@ -1,0 +1,27 @@
+.page-header {
+  display: flex;
+  flex-direction: column;
+
+  &__logo {
+    height: 80px;
+  }
+
+  &__nav {
+    min-height: 315px;
+  }
+}
+
+@media (min-width: @table-width) {
+  .page-header {
+    flex-direction: row;
+
+    &__logo {
+      height: 89px;
+    }
+
+    &__nav {
+      display: flex;
+      min-height: 135px;
+    }
+  }
+}
