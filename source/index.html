@@ -7,12 +7,12 @@
 </head>
 <body>
   <header class="page-header">
-    <nav class="main-nav">
-      <a class="page-header__logo">
-        <img class="page-header__logo-image" src="img/logo-mobile.svg" width="86" height="35" alt="Логотип интернет магазина «Мишка»">
-      </a>
+    <a class="page-header__logo">
+      <img class="page-header__logo-image" src="img/logo-mobile.svg" width="86" height="35" alt="Логотип интернет магазина «Мишка»">
+    </a>
+    <div class="page-header__nav main-nav">
       <button class="main-nav__toggle" type="button">Открыть меню</button>
-      <div class="main-nav__wrapper">
+      <nav class="main-nav__site">
         <ul class="main-nav__list site-list">
           <li class="site-list__item">
             <a class="main-nav__link" href="catalog.html">Каталог товаров</a>
@@ -21,16 +21,16 @@
             <a class="main-nav__link" href="form.html">Вязание на заказ</a>
           </li>
         </ul>
-        <form class="main-nav__list search-form" action="https://echo.htmlacademy.ru" method="get">
-          <input class="search-form__item" type="search" name="search" placeholder="Поиск по сайту" aria-label="Поиск по сайту">
-        </form>
-        <ul class="main-nav__list user-list">
-          <li class="user-list__item">
-            <a class="main-nav__link" href="cart.html">Корзина: пока пуста</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
+      </nav>
+      <form class="main-nav__list search-form" action="https://echo.htmlacademy.ru" method="get">
+        <input class="search-form__item" type="search" name="search" placeholder="Поиск по сайту" aria-label="Поиск по сайту">
+      </form>
+      <ul class="main-nav__list user-list">
+        <li class="user-list__item">
+          <a class="main-nav__link" href="cart.html">Корзина: пока пуста</a>
+        </li>
+      </ul>
+    </div>
   </header>
 
   <main class="page-main">
