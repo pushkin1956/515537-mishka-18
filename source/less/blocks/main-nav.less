@@ -1,4 +1,14 @@
 .main-nav {
+  &__toggle {
+    position: absolute;
+    top: 22.5px;
+    right: 0;
+  }
+
+  &__site {
+    min-height: 158px; /*временно*/
+  }
+
   &__list {
     .pm-zero();
     list-style: none;
@@ -7,5 +17,32 @@
   &__link {
     .font(17px; 700; 24px);
     color: #000000;
+  }
+}
+
+@media (min-width: @table-width) {
+  .main-nav {
+    display: flex;
+    flex-wrap: wrap;
+
+    &__toggle {
+      display: none;
+    }
+
+    &__site {
+      order: 1;
+      min-height: 41px; /*временно*/
+      width: 330px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-nav {
+    &__site {
+      order: 0;
+      width: 380px;
+      min-height: 135px; /*временно*/
+    }
   }
 }
