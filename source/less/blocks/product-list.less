@@ -1,5 +1,7 @@
 .product-list {
   .pm-zero();
+  width: 320px;
+  margin: 0 auto;
 
   &__item {
     list-style: none;
@@ -20,5 +22,28 @@
     padding-left: 30px;
     .font(19px; 700; 24px);
     color: #ffffff;
+  }
+}
+
+@media (min-width: @table-width) {
+  .product-list {
+    display: flex;
+    width: 668px;
+    padding: 0 50px;
+    margin: 0 auto;
+
+    &__item {
+      width: 334px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .product-list {
+    width: 1050px;
+
+    &__item {
+      width: 525px;
+    }
   }
 }
