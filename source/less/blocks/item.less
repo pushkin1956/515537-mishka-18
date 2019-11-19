@@ -2,11 +2,72 @@
   padding-top: 30px;
   padding-bottom: 30px;
 
+  &__header {
+    height: 55px; /*временно для сетки*/
+    padding: 30px 0;
+    padding-left: 28px;
+  }
+
   &__title {
+    .pm-zero();
     .font(17px; 700; 24px);
   }
 
   &__description {
+    .pm-zero();
     font-size: 13px;
+  }
+
+  &__price {
+    display: block;
+    height: 75px; /*временно для сетки*/
+    padding-left: 28px;
+  }
+}
+
+@media (min-width: @table-width) {
+  .item {
+    padding-top: 0;
+
+    &__link {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    &__image {
+      width: 334px;
+      height: 334px;
+    }
+
+    &__header {
+      width: 306px;
+    }
+
+    &__price {
+      margin-left: auto;
+      margin-top: -75px;
+      margin-right: 230px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .item {
+    &__link {
+      display: block;
+    }
+
+    &__image {
+      width: 315px;
+      height: 462px;
+    }
+
+    &__header {
+      width: 287px;
+    }
+
+    &__price {
+      margin: 0;
+    }
   }
 }

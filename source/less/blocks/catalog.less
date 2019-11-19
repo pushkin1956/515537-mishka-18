@@ -1,4 +1,32 @@
-.catalog__list {
-  .pm-zero();
-  list-style: none;
+.catalog{
+  width: 260px;
+  padding-top: 80px;
+  padding-left: 30px;
+  padding-right: 30px;
+  margin: 0 auto;
+  &__list {
+    .pm-zero();
+    list-style: none;
+  }
 }
+
+@media (min-width: @table-width) {
+  .catalog {
+    width: 668px;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .catalog {
+    width: 1050px;
+    padding-top: 130px;
+
+    &__list {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}
+
