@@ -1,18 +1,57 @@
 .write-us {
+  width: 260px;
   padding-top: 30px;
+  padding-right: 30px;
   padding-bottom: 30px;
+  padding-left: 30px;
+  margin: 0 auto;
 
   &__title {
     .pm-zero();
     .font(25px; 700; 30px);
+    height: 80px; /*временно для разметки*/
   }
 
   &__list {
     .pm-zero();
+    list-style: none;
+  }
+
+  &__item {
+    height: 115px; /*временно для сетки*/
   }
 
   &__item-title {
     .pm-zero();
     .font(17px; 700; 20px);
+  }
+}
+
+@media (min-width: @table-width) {
+  .write-us {
+    width: 668px;
+    padding-left: 50px;
+    padding-right: 50px;
+
+    &__list {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    &__item {
+      width: 334px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .write-us {
+    width: 700px;
+    padding-left: 225px;
+    padding-right: 225px;
+
+    &__item {
+      width: 350px;
+    }
   }
 }
