@@ -1,13 +1,11 @@
 .page-main-catalog__title {
   .pm-zero();
-  background-color: #f1f1f1;
+  background-color: @bg-block;
 
   span {
     display: block;
     height: 175px; /*временно для сетки*/
-    width: 260px;
-    padding-left: 30px;
-    padding-right: 30px;
+    .container(260px; 30px);
     margin: 0 auto;
     .font(27px; 700; 30px);
   }
@@ -19,9 +17,7 @@
 
     span {
       height: 210px; /*временно для сетки*/
-      width: 668px;
-      padding-left: 50px;
-      padding-right: 50px;
+      .container(668px; 50px);
       text-align: center;
     }
   }

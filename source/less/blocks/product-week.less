@@ -1,8 +1,6 @@
 .product-week {
-  width: 260px;
-  padding-right: 30px;
+  .container(260px; 30px);
   padding-bottom: 35px;
-  padding-left: 30px;
   margin: 0 auto;
 
   &__header {
@@ -12,7 +10,7 @@
   &__title {
     .pm-zero();
     .font(17px; 700; 20px);
-    color: #63d1bb;
+    color: @title-week;
   }
 
   &__title-product {
@@ -45,10 +43,9 @@
 @media (min-width: @table-width) {
   .product-week {
     position: relative;
-    width: 668px;
+    .container(668px; 50px);
     height: 610px; /*временно для сетки*/
-    padding-right: 50px;
-    padding-left: 50px;
+
 
     &__header {
       height: 95px; /*временно для сетки*/

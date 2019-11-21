@@ -1,18 +1,17 @@
 .product-list {
   .pm-zero();
-  width: 320px;
-  margin: 0 auto;
+  .center(320px);
 
   &__item {
     list-style: none;
   }
 
   &__item--interior {
-    background-color: #63d1bb;
+    background-color: @bg-title-light;
   }
 
   &__item--toy {
-    background-color: #56c3b2;
+    background-color: @bg-title-dark;
   }
 
   &__title {
@@ -21,15 +20,14 @@
     padding-bottom: 40px;
     padding-left: 30px;
     .font(19px; 700; 24px);
-    color: #ffffff;
+    color: @title-color;
   }
 }
 
 @media (min-width: @table-width) {
   .product-list {
     display: flex;
-    width: 668px;
-    padding: 0 50px;
+    .container(668px; 50px);
     margin: 0 auto;
 
     &__item {

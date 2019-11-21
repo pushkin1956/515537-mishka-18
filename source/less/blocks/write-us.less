@@ -1,9 +1,7 @@
 .write-us {
-  width: 260px;
+  .container(260px; 30px);
   padding-top: 30px;
-  padding-right: 30px;
   padding-bottom: 30px;
-  padding-left: 30px;
   margin: 0 auto;
 
   &__title {
@@ -29,9 +27,7 @@
 
 @media (min-width: @table-width) {
   .write-us {
-    width: 668px;
-    padding-left: 50px;
-    padding-right: 50px;
+    .container(668px; 50px);
 
     &__list {
       display: flex;
@@ -46,9 +42,7 @@
 
 @media (min-width: @desktop-width) {
   .write-us {
-    width: 700px;
-    padding-left: 225px;
-    padding-right: 225px;
+    .container(700px; 225px);
 
     &__item {
       width: 350px;

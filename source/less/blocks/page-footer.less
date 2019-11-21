@@ -1,10 +1,8 @@
 .page-footer {
-  background-color: #f1f1f1;
+  background-color: @bg-block;
 
   &__wrapper {
-    width: 260px;
-    padding-left: 30px;
-    padding-right: 30px;
+    .container(260px; 30px);
     margin: 0 auto;
     height: 160px; /*временно для сетки*/
   }
@@ -17,9 +15,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      width: 668px;
-      padding-left: 50px;
-      padding-right: 50px;
+      .container(668px; 50px);
       height: 142px;
     }
 
@@ -44,8 +40,6 @@
       justify-content: space-between;
       align-items: center;
       width: 1050px;
-      padding-left: 50px;
-      padding-right: 50px;
       height: 142px;
     }
   }
