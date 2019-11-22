@@ -1,4 +1,7 @@
 .form {
+  .container(260px; 30px);
+  margin: 0 auto;
+
   &__fieldset {
     .pm-zero();
     border: none;
@@ -12,7 +15,6 @@
   &__list {
     .pm-zero();
     padding-top: 42px;
-    padding-bottom: 48px;
     list-style: none;
   }
 
@@ -20,7 +22,14 @@
     .font(17px; 700; 18px);
   }
 
+  &__notice {
+    .pm-zero();
+    margin-bottom: 30px;
+  }
+
   &__button {
+    width: 260px;
+    height: 52px; /*временно*/
     margin-bottom: 55px;
   }
 }
