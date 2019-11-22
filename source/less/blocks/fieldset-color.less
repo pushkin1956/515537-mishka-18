@@ -8,3 +8,23 @@
     padding-left: 62px;
   }
 }
+
+@media (min-width: @table-width) {
+  .fieldset-color {
+    background-color: @bg-block;
+
+    &__legend {
+      margin-top: 65px;
+    }
+
+    &__list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    &__option {
+      width: 250px;
+    }
+  }
+}

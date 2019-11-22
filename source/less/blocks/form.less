@@ -33,3 +33,35 @@
     margin-bottom: 55px;
   }
 }
+
+@media (min-width: @table-width) {
+  .form {
+    position: relative;
+    .center(768px);
+    padding: 0;
+
+    &__fieldset-wrapper {
+      .container(668px; 50px);
+      display: flex;
+    }
+
+    &__list {
+      width: 500px;
+      margin-left: auto;
+    }
+
+    &__notice {
+      position: absolute;
+      right: 0;
+      bottom: 70px;
+      width: 300px;
+      margin-bottom: 0;
+    }
+
+    &__button {
+      width: 230px;
+      margin-left: 50px;
+      margin-bottom: 50px;
+    }
+  }
+}

@@ -20,3 +20,23 @@
     font-size: 13px;
   }
 }
+
+@media (min-width: @table-width) {
+  .page-main-order {
+    &__title {
+      margin-top: -40px;
+    }
+
+    span {
+      height: 210px; /*временно для сетки*/
+      .container(668px; 50px);
+      text-align: center;
+    }
+
+    &__description {
+      .container(668px; 50px);
+      padding-top: 80px;
+      padding-bottom: 60px;
+    }
+  }
+}
