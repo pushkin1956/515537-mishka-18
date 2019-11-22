@@ -2,25 +2,28 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Каталог товаров. Интернет магазин «Мишка»</title>
   <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
   <header class="page-header">
-    <nav class="main-nav">
-      <a class="page-header__logo" href="index.html">
+    <div class="page-header__wrapper">
+      <a class="page-header__logo" href="index.html" title="Ссылка на главную страницу">
         <img class="page-header__logo-image" src="img/logo-mobile.svg" width="86" height="35" alt="Логотип интернет магазина «Мишка»">
       </a>
-      <button class="main-nav__toggle" type="button">Открыть меню</button>
-      <div class="main-nav__wrapper">
-        <ul class="main-nav__list site-list">
-          <li class="site-list__item">
-            <a class="main-nav__link" href="catalog.html">Каталог товаров</a>
-          </li>
-          <li class="site-list__item">
-            <a class="main-nav__link" href="form.html">Вязание на заказ</a>
-          </li>
-        </ul>
+      <div class="page-header__nav main-nav">
+        <button class="main-nav__toggle" type="button">Открыть меню</button>
+        <nav class="main-nav__site">
+          <ul class="main-nav__list site-list">
+            <li class="site-list__item">
+              <a class="main-nav__link" href="catalog.html">Каталог товаров</a>
+            </li>
+            <li class="site-list__item">
+              <a class="main-nav__link" href="form.html">Вязание на заказ</a>
+            </li>
+          </ul>
+        </nav>
         <form class="main-nav__list search-form" action="https://echo.htmlacademy.ru" method="get">
           <input class="search-form__item" type="search" name="search" placeholder="Поиск по сайту" aria-label="Поиск по сайту">
         </form>
@@ -30,35 +33,41 @@
           </li>
         </ul>
       </div>
-    </nav>
+    </div>
   </header>
 
   <main class="page-main-catalog">
-    <h1 class="page-main-catalog__title">Каталог товаров</h1>
+    <h1 class="page-main-catalog__title"><span>Каталог товаров</span></h1>
     <section class="catalog">
       <h2 class="visually-hidden">Список товаров</h2>
       <ul class="catalog__list">
         <li class="catalog__item item">
           <a class="item__link">
             <img class="item__image" src="img/photo-hare-mobile@1x.jpg" width="260" height="195" alt="Фотография игрушки Зайчик-попрыгайчик">
-            <h3 class="item__title">Зайчик-попрыгайчик</h3>
-            <p class="item__description">Рост 30 см, вес 200 г</p>
+            <div class="item__header">
+              <h3 class="item__title">Зайчик-попрыгайчик</h3>
+              <p class="item__description">Рост 30 см, вес 200 г</p>
+            </div>
             <b class="item__price">1 200 руб.</b>
           </a>
         </li>
         <li class="catalog__item item">
           <a class="item__link">
             <img class="item__image" src="img/photo-bowl-mobile@1x.jpg" width="260" height="195" alt="Фотография вязаной корзинки для белья">
-            <h3 class="item__title">Корзинка для белья</h3>
-            <p class="item__description">Диаметр 15 см, высота 10 см</p>
+            <div class="item__header">
+              <h3 class="item__title">Корзинка для белья</h3>
+              <p class="item__description">Диаметр 15 см, высота 10 см</p>
+            </div>
             <b class="item__price">690 руб.</b>
           </a>
         </li>
         <li class="catalog__item item">
           <a class="item__link">
             <img class="item__image" src="img/photo-toys-mobile@1x.jpg" width="260" height="195" alt="Фотография большой вязаной корзинки для игрушек">
-            <h3 class="item__title">Большая корзинка для игрушек</h3>
-            <p class="item__description">Диаметр 30 см, высота 30 см</p>
+            <div class="item__header">
+              <h3 class="item__title">Большая корзинка для игрушек</h3>
+              <p class="item__description">Диаметр 30 см, высота 30 см</p>
+            </div>
             <b class="item__price">1 500 руб.</b>
           </a>
         </li>

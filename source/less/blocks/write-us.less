@@ -1,18 +1,51 @@
 .write-us {
+  .container(260px; 30px);
   padding-top: 30px;
   padding-bottom: 30px;
+  margin: 0 auto;
 
   &__title {
     .pm-zero();
     .font(25px; 700; 30px);
+    height: 80px; /*временно для разметки*/
   }
 
   &__list {
     .pm-zero();
+    list-style: none;
+  }
+
+  &__item {
+    height: 115px; /*временно для сетки*/
   }
 
   &__item-title {
     .pm-zero();
     .font(17px; 700; 20px);
+  }
+}
+
+@media (min-width: @table-width) {
+  .write-us {
+    .container(668px; 50px);
+
+    &__list {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    &__item {
+      width: 334px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .write-us {
+    .container(700px; 225px);
+
+    &__item {
+      width: 350px;
+    }
   }
 }

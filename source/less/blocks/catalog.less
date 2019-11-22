@@ -1,4 +1,28 @@
-.catalog__list {
-  .pm-zero();
-  list-style: none;
+.catalog {
+  .container(260px; 30px);
+  padding-top: 80px;
+  margin: 0 auto;
+
+  &__list {
+    .pm-zero();
+    list-style: none;
+  }
+}
+
+@media (min-width: @table-width) {
+  .catalog {
+    .container(668px; 50px);
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .catalog {
+    width: 1050px;
+    padding-top: 130px;
+
+    &__list {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
 }

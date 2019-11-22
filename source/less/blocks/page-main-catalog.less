@@ -1,6 +1,33 @@
 .page-main-catalog__title {
   .pm-zero();
-  padding-top: 73px;
-  padding-bottom: 73px;
-  background-color: #f1f1f1;
+  background-color: @bg-block;
+
+  span {
+    display: block;
+    height: 175px; /*временно для сетки*/
+    .container(260px; 30px);
+    margin: 0 auto;
+    .font(27px; 700; 30px);
+  }
+}
+
+@media (min-width: @table-width) {
+  .page-main-catalog__title {
+    margin-top: -40px;
+
+    span {
+      height: 210px; /*временно для сетки*/
+      .container(668px; 50px);
+      text-align: center;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-main-catalog__title {
+    span {
+      height: 235px; /*временно для сетки*/
+      width: 1050px;
+    }
+  }
 }

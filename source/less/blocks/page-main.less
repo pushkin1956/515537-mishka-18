@@ -5,6 +5,27 @@
     .pm-zero();
     padding-top: 70px;
     padding-bottom: 120px;
+    .container(260px; 30px);
     .font(27px; 700; 30px);
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: @table-width) {
+  .page-main {
+    &__title {
+      .container(668px; 50px);
+      padding-top: 158px;
+      padding-bottom: 368px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-main {
+    &__title {
+      width: 1050px;
+      padding-bottom: 358px;
+    }
   }
 }

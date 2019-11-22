@@ -1,5 +1,46 @@
 .page-footer {
-  padding-top: 20px;
-  padding-bottom: 20px;
-  background-color: #f1f1f1;
+  background-color: @bg-block;
+
+  &__wrapper {
+    .container(260px; 30px);
+    margin: 0 auto;
+    height: 160px; /*временно для сетки*/
+  }
+}
+
+@media (min-width: @table-width) {
+  .page-footer {
+    &__wrapper {
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .container(668px; 50px);
+      height: 142px;
+    }
+
+    &__wrapper::before {
+      content: "";
+
+      top: middle;
+      left: 0;
+      width: 105px;
+      height: 50px;
+
+      background-color: rgba(211, 221, 125, 0.8); /*временно*/
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-footer {
+    &__wrapper {
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 1050px;
+      height: 142px;
+    }
+  }
 }

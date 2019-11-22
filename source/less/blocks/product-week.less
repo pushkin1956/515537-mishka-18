@@ -1,11 +1,16 @@
 .product-week {
-  padding-top: 30px;
+  .container(260px; 30px);
   padding-bottom: 35px;
+  margin: 0 auto;
+
+  &__header {
+    height: 110px; /*временно для сетки*/
+  }
 
   &__title {
     .pm-zero();
     .font(17px; 700; 20px);
-    color: #63d1bb;
+    color: @title-week;
   }
 
   &__title-product {
@@ -14,11 +19,92 @@
   }
 
   &__description {
+    height: 85px; /*временно для сетки*/
     .pm-zero();
+  }
+
+  &__list-description {
+    width: 260px;
+    height: 150px; /*временно для сетки*/
   }
 
   &__price {
     .pm-zero();
     .font(17px; 700; 24px);
+    height: 75px; /*временно для сетки*/
+  }
+
+  &__order {
+    height: 52px; /*временно для сетки*/
+    width: 260px;
+  }
+}
+
+@media (min-width: @table-width) {
+  .product-week {
+    position: relative;
+    .container(668px; 50px);
+    height: 610px; /*временно для сетки*/
+
+
+    &__header {
+      height: 95px; /*временно для сетки*/
+    }
+
+    &__image {
+      position: absolute;
+      width: 334px;
+      height: 404px;
+      top: 95px;
+      right: 50px;
+    }
+
+    &__description {
+      width: 334px;
+    }
+
+    &__list-description {
+      width: 334px;
+    }
+
+    &__price {
+      width: 334px;
+    }
+
+    &__order {
+      width: 334px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .product-week {
+    width: 1050px;
+
+    &__header {
+      width: 1050px;
+    }
+
+    &__image {
+      top: 0;
+      width: 525px;
+      height: 635px;
+    }
+
+    &__description {
+      margin-left: 175px;
+    }
+
+    &__list-description {
+      margin-left: 175px;
+    }
+
+    &__price {
+      margin-left: 175px;
+    }
+
+    &__order {
+      margin-left: 175px;
+    }
   }
 }

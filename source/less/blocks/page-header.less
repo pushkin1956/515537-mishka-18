@@ -1,0 +1,47 @@
+.page-header {
+  &__wrapper {
+    .center(320px);
+  }
+
+  &__logo {
+    display: block;
+    height: 35px;
+    padding: 22.5px 0;
+  }
+
+  &__nav {
+    min-height: 315px;
+  }
+}
+
+@media (min-width: @table-width) {
+  .page-header {
+    &__wrapper {
+      .container(668px; 50px);
+    }
+
+    &__logo {
+      width: 115px; /*временно*/
+      position: absolute;
+      height: 46px;
+      padding: 21.5px 0;
+    }
+
+    &__nav {
+      min-height: 130px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-header {
+    &__wrapper {
+      width: 1050px;
+    }
+
+    &__logo {
+      left: 50%;
+      margin-left: -57.5px; /*временно*/
+    }
+  }
+}

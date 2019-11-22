@@ -1,6 +1,16 @@
 .main-nav {
-  padding-top: 23px;
-  padding-bottom: 23px;
+  position: relative;
+  .center(320px);
+
+  &__toggle {
+    position: absolute;
+    right: 0;
+    top: -50px;
+  }
+
+  &__site {
+    min-height: 158px; /*временно*/
+  }
 
   &__list {
     .pm-zero();
@@ -9,6 +19,35 @@
 
   &__link {
     .font(17px; 700; 24px);
-    color: #000000;
+    color: @link-color;
+  }
+}
+
+@media (min-width: @table-width) {
+  .main-nav {
+    display: flex;
+    flex-wrap: wrap;
+    width: auto;
+    margin: 0;
+
+    &__toggle {
+      display: none;
+    }
+
+    &__site {
+      order: 1;
+      min-height: 41px; /*временно*/
+      width: 330px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-nav {
+    &__site {
+      order: 0;
+      width: 380px;
+      min-height: 135px; /*временно*/
+    }
   }
 }
