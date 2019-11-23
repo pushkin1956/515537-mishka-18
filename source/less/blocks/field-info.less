@@ -1,4 +1,7 @@
-.fieldset-info {
+.field-info {
+  display: flex;
+  flex-direction: column;
+
   &__field {
     .pm-zero();
     margin-bottom: 17px;
@@ -12,7 +15,9 @@
 }
 
 @media (min-width: @table-width) {
-  .fieldset-info {
+  .field-info {
+    flex-direction: row;
+
     &__legend {
       .m-top();
     }
@@ -28,7 +33,7 @@
 }
 
 @media (min-width: @desktop-width) {
-  .fieldset-info {
+  .field-info {
     &__legend {
       .m-left();
     }

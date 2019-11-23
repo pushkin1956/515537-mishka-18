@@ -1,4 +1,7 @@
-.fieldset-email {
+.field-tel {
+  display: flex;
+  flex-direction: column;
+
   &__field {
     margin-bottom: 30px;
   }
@@ -9,24 +12,26 @@
 }
 
 @media (min-width: @table-width) {
-  .fieldset-email {
+  .field-tel {
     background-color: @bg-block;
-
-    &__field {
-      height: 50px;
-      width: 500px;
-      margin-top: 0;
-      margin-left: auto;
-    }
+    flex-direction: row;
 
     &__legend {
-      margin-top: 0;
+      .m-top();
+      margin-bottom: 0;
+    }
+
+    &__field {
+      height: 50px; /*Временно*/
+      width: 500px;
+      margin-top: 45px;
+      margin-left: auto;
     }
   }
 }
 
 @media (min-width: @desktop-width) {
-  .fieldset-email {
+  .field-tel {
     &__legend {
       .m-left();
     }

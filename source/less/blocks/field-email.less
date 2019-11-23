@@ -1,4 +1,7 @@
-.fieldset-tel {
+.field-email {
+  display: flex;
+  flex-direction: column;
+
   &__field {
     margin-bottom: 30px;
   }
@@ -9,24 +12,26 @@
 }
 
 @media (min-width: @table-width) {
-  .fieldset-tel {
+  .field-email {
     background-color: @bg-block;
+    flex-direction: row;
 
     &__legend {
-      .m-top();
+      margin-top: 12px;
+      margin-bottom: 0;
     }
 
     &__field {
       height: 50px;
       width: 500px;
-      margin-top: 55px;
+      margin-bottom: 50px;
       margin-left: auto;
     }
   }
 }
 
 @media (min-width: @desktop-width) {
-  .fieldset-tel {
+  .field-email {
     &__legend {
       .m-left();
     }
