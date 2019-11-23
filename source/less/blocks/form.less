@@ -37,7 +37,7 @@
 @media (min-width: @table-width) {
   .form {
     position: relative;
-    .center(768px);
+    .center(@table-width);
     padding: 0;
 
     &__fieldset-wrapper {
@@ -68,7 +68,7 @@
 
 @media (min-width: @desktop-width) {
   .form {
-    .center(1150px);
+    .center(@desktop-width);
 
     &__fieldset-wrapper {
       width: 1050px;

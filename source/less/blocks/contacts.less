@@ -39,7 +39,7 @@
 
 @media (min-width: @table-width) {
   .contacts {
-    .center(768px);
+    .center(@table-width);
     padding-top: 65px;
     padding-bottom: 58px;
 
@@ -56,13 +56,13 @@
     }
 
     &__map {
-      width: 768px;
+      width: @table-width;
       height: 457px;
       margin-bottom: 55px;
     }
 
     &__img {
-      width: 768px;
+      width: @table-width;
       height: 457px;
     }
 
@@ -80,11 +80,9 @@
     padding-bottom: 105px;
 
     &__wrapper {
+      .pm-zero();
       width: 350px;
-      flex-shrink: 0;
-      padding: 0;
       padding-left: 175px;
-      margin: 0;
     }
 
     &__map {
