@@ -18,6 +18,14 @@
     margin-bottom: 40px;
   }
 
+  &__email {
+    .pm-zero();
+  }
+
+  &__address {
+    .pm-zero();
+  }
+
   &__map {
     display: block;
     width: 320px;
@@ -52,7 +60,16 @@
     }
 
     &__list {
+      display: flex;
       margin-bottom: 60px;
+    }
+
+    &__email {
+      width: 334px;
+    }
+
+    &__address {
+      width: 334px;
     }
 
     &__map {
@@ -83,6 +100,10 @@
       .pm-zero();
       width: 350px;
       padding-left: 175px;
+    }
+
+    &__list {
+      flex-direction: column;
     }
 
     &__map {

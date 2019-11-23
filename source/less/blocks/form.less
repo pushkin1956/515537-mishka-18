@@ -37,22 +37,17 @@
 @media (min-width: @table-width) {
   .form {
     position: relative;
-    .center(@table-width);
-    padding: 0;
-
-    &__fieldset-wrapper {
-      .container(668px; 50px);
-      display: flex;
-    }
+    .container(668px; 50px);
 
     &__list {
       width: 500px;
       margin-left: auto;
+      margin-bottom: 50px;
     }
 
     &__notice {
       position: absolute;
-      right: 0;
+      right: 50px;
       bottom: 70px;
       width: 300px;
       margin-bottom: 0;
@@ -60,7 +55,6 @@
 
     &__button {
       width: 230px;
-      margin-left: 50px;
       margin-bottom: 50px;
     }
   }
@@ -68,11 +62,7 @@
 
 @media (min-width: @desktop-width) {
   .form {
-    .center(@desktop-width);
-
-    &__fieldset-wrapper {
-      width: 1050px;
-    }
+    .container(1050px; 50px);
 
     &__list {
       width: 735px;
@@ -84,7 +74,7 @@
     }
 
     &__button {
-      margin-left: 225px;
+      margin-left: 175px;
     }
   }
 }
