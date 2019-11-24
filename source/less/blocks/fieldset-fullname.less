@@ -1,0 +1,27 @@
+.fieldset-fullname {
+  &__option {
+    height: 70px; /*временно*/
+    margin-bottom: 20px;
+  }
+}
+
+@media (min-width: @table-width) {
+  .fieldset-fullname {
+    &__legend {
+      position: relative;
+      .pos-top();
+    }
+
+    &__option {
+      height: 50px; /*временно*/
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .fieldset-fullname {
+    &__legend {
+      .m-left();
+    }
+  }
+}

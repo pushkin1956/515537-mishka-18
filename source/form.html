@@ -37,7 +37,7 @@
   </header>
 
   <main class="page-main-order">
-    <h1 class="page-main-order__title">Вязание на заказ</h1>
+    <h1 class="page-main-order__title"><span>Вязание на заказ</span></h1>
     <p class="page-main-order__description">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
     <form class="page-main-order__form form" action="https://echo.htmlacademy.ru" method="post">
       <fieldset class="form__fieldset fieldset-type">
@@ -49,7 +49,7 @@
           </li>
           <li class="form__option fieldset-type__option">
             <input class="form__field fieldset-type__field" type="radio" name="type" id="type-toy" value="toy">
-            <label class="form__label fieldset-toy__label" for="type-toy">Детская игрушка</label>
+            <label class="form__label fieldset-type__label" for="type-toy">Детская игрушка</label>
           </li>
         </ul>
       </fieldset>
@@ -102,20 +102,20 @@
         </ul>
       </fieldset>
 
-      <fieldset class="form__fieldset fieldset-tel">
-        <legend class="form__legend fieldset-tel__legend">Тел</legend>
-        <input class="form__field fieldset-tel__field" type="tel" name="phone" placeholder="+7 XXX XXX XX XX*" required>
-      </fieldset>
+      <div class="form__field-tel field-tel">
+        <label class="form__legend field-tel__legend">Тел</label>
+        <input class="form__field field-tel__field" type="tel" name="phone" placeholder="+7 XXX XXX XX XX*" required>
+      </div>
 
-      <fieldset class="form__fieldset fieldset-email">
-        <legend class="form__legend fieldset-email__legend">E-mail</legend>
-        <input class="form__field fieldset-email__field" type="email" name="email" placeholder="Ваш Email*" required>
-      </fieldset>
+      <div class="form__field-email field-email">
+        <label class="form__legend field-email__legend">E-mail</label>
+        <input class="form__field field-email__field" type="email" name="email" placeholder="Ваш Email*" required>
+      </div>
 
-      <fieldset class="form__fieldset fieldset-info">
-        <legend class="form__legend fieldset-info__legend">Доп</legend>
-        <textarea class="form__field fieldset-info__field" name="additional-info" placeholder="Опишите все ваши пожелания к заказу"></textarea>
-      </fieldset>
+      <div class="form__field-info field-info">
+        <label class="form__legend field-info__legend">Доп</label>
+        <textarea class="form__field field-info__field" name="additional-info" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+      </div>
       <p class="form__notice">*Поля обязательны для заполнения</p>
       <button class="button form__button" type="submit">Отправить заказ</button>
     </form>

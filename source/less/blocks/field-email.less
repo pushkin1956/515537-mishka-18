@@ -1,0 +1,44 @@
+.field-email {
+  display: flex;
+  flex-direction: column;
+
+  &__field {
+    margin-bottom: 30px;
+  }
+
+  &__legend {
+    margin-bottom: 25px;
+  }
+}
+
+@media (min-width: @table-width) {
+  .field-email {
+    background-color: @bg-block;
+    flex-direction: row;
+
+    &__legend {
+      margin-top: 12px;
+      margin-bottom: 0;
+    }
+
+    &__field {
+      height: 50px;
+      width: 500px;
+      margin-bottom: 50px;
+      margin-left: auto;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .field-email {
+    &__legend {
+      .m-left();
+    }
+
+    &__field {
+      width: 700px;
+      margin-right: 175px;
+    }
+  }
+}

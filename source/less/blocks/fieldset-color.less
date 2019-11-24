@@ -1,0 +1,43 @@
+.fieldset-color {
+  &__option {
+    height: 40px; /*Временно*/
+    margin-bottom: 22px;
+  }
+
+  &__label {
+    padding-left: 62px;
+  }
+}
+
+@media (min-width: @table-width) {
+  .fieldset-color {
+    background-color: @bg-block;
+
+    &__legend {
+      position: relative;
+      .pos-top();
+    }
+
+    &__list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    &__option {
+      width: 250px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .fieldset-color {
+    &__legend {
+      .m-left();
+    }
+
+    &__option {
+      width: 245px;
+    }
+  }
+}

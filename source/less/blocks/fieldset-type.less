@@ -1,0 +1,27 @@
+.fieldset-type {
+  &__option {
+    height: 45px; /*временно*/
+    margin-bottom: 25px;
+  }
+
+  &__label {
+    padding-left: 62px;
+  }
+}
+
+@media (min-width: @table-width) {
+  .fieldset-type {
+    &__legend {
+      position: relative;
+      .pos-top;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .fieldset-type {
+    &__legend {
+      .m-left();
+    }
+  }
+}

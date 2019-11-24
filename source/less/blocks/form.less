@@ -1,4 +1,7 @@
 .form {
+  .container(260px; 30px);
+  margin: 0 auto;
+
   &__fieldset {
     .pm-zero();
     border: none;
@@ -12,7 +15,6 @@
   &__list {
     .pm-zero();
     padding-top: 42px;
-    padding-bottom: 48px;
     list-style: none;
   }
 
@@ -20,7 +22,59 @@
     .font(17px; 700; 18px);
   }
 
+  &__notice {
+    .pm-zero();
+    margin-bottom: 30px;
+  }
+
   &__button {
+    width: 260px;
+    height: 52px; /*временно*/
     margin-bottom: 55px;
+  }
+}
+
+@media (min-width: @table-width) {
+  .form {
+    position: relative;
+    .container(668px; 50px);
+
+    &__list {
+      width: 500px;
+      margin-left: auto;
+      margin-bottom: 50px;
+    }
+
+    &__notice {
+      position: absolute;
+      right: 50px;
+      bottom: 70px;
+      width: 300px;
+      margin-bottom: 0;
+    }
+
+    &__button {
+      width: 230px;
+      margin-bottom: 50px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .form {
+    .container(1050px; 50px);
+
+    &__list {
+      width: 735px;
+      margin-right: 140px;
+    }
+
+    &__notice {
+      right: 225px;
+    }
+
+    &__button {
+      margin-left: 175px;
+    }
   }
 }
