@@ -1,0 +1,41 @@
+.site-nav {
+  &__list {
+    .pm-zero();
+    list-style: none;
+  }
+
+  &__link {
+    display: block;
+    .font(17px; 700; 24px);
+    padding-top: 27.5px;
+    padding-bottom: 27.5px;
+    padding-left: 76px;
+    color: @link-color;
+    box-shadow: inset 0px 1px 0px 0px rgba(236, 236, 236, 1);
+
+    &:hover,
+    &:focus {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
+}
+
+@media (min-width: @table-width) {
+  .site-nav {
+    order: 1;
+    min-height: 41px; /*временно*/
+    width: 330px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .site-nav {
+    order: 0;
+    width: 380px;
+    min-height: 135px; /*временно*/
+  }
+}
