@@ -1,5 +1,53 @@
 .user-list {
   min-height: 78px; /*временно*/
+  .pm-zero();
+  list-style: none;
+
+  &__link {
+    position: relative;
+    display: block;
+    .font(17px; 700; 24px);
+    padding-top: 27.5px;
+    padding-bottom: 27.5px;
+    padding-left: 76px;
+    color: @link-color;
+    box-shadow: inset 0px 1px 0px 0px rgba(236, 236, 236, 1);
+
+    &:hover,
+    &:focus {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    top: 31px;
+    left: 30px;
+
+    width: 21px;
+    height: 18px;
+
+    path {
+      fill: rgba(0, 0, 0, 0.2);
+    }
+  }
+
+  &__link:hover &__icon,
+  &__link:focus &__icon {
+    path {
+      fill: rgba(99, 209, 187, 1);
+    }
+  }
+
+  &__link:active &__icon {
+    path {
+      fill: rgba(99, 209, 187, 0.3);
+    }
+  }
 }
 
 @media (min-width: @table-width) {

@@ -1,17 +1,18 @@
 .page-header {
+  box-shadow: inset 0px 1px 0px 0px rgba(236, 236, 236, 1),
+  inset 0px -1px 0px 0px rgba(236, 236, 236, 1);
+
   &__wrapper {
     .center(320px);
   }
 
   &__logo {
     display: block;
+    width: 86px;
     height: 35px;
+    margin-left: calc(50% - 43px);
     padding: 22.5px 0;
     z-index: 1;
-  }
-
-  &__nav {
-    min-height: 315px;
   }
 }
 
@@ -26,10 +27,6 @@
       position: absolute;
       height: 46px;
       padding: 21.5px 0;
-    }
-
-    &__nav {
-      min-height: 130px;
     }
   }
 }
