@@ -4,6 +4,10 @@
     list-style: none;
   }
 
+  &__item--desktop {
+    display: none;
+  }
+
   &__link {
     display: block;
     .font(17px; 700; 24px);
@@ -27,8 +31,20 @@
 @media (min-width: @table-width) {
   .site-nav {
     order: 1;
-    min-height: 41px; /*временно*/
-    width: 330px;
+    width: 334px;
+
+    &__list {
+      position: absolute;
+      display: flex;
+    }
+
+    &__link {
+      width: 167px;
+      font-size: 15px;
+      padding: 0;
+      padding-top: 17px;
+      box-shadow: none;
+    }
   }
 }
 
