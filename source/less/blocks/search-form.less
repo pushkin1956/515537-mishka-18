@@ -49,20 +49,43 @@
 @media (min-width: @table-width) {
   .search-form {
     margin-left: auto;
-    width: 83px;
     min-height: 89px;
     box-shadow: inset 0px 1px 0px 0px rgba(236, 236, 236, 1);
 
     &__item {
-      padding-top: 35px;
-      padding-bottom: 36px;
+      width: 83px;
+      padding-top: 36px;
+      padding-bottom: 35px;
       box-shadow: inset 0px 1px 0px 0px rgba(236, 236, 236, 1),
       inset 1px 0px 0px 0px rgba(236, 236, 236, 1);
+      background-color: transparent;
+    }
+
+    &__item:focus {
+      width: 237px;
     }
 
     &__icon {
       top: 36px;
       left: 34px;
+      z-index: -1;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .search-form {
+    &__item:focus {
+      padding-left: 45px;
+      width: 180px;
+    }
+
+    &__item:focus ~ &__icon {
+      left: 15px;
+    }
+
+    &__item::placeholder {
+      font-size: 15px;
     }
   }
 }
