@@ -51,7 +51,33 @@
 @media (min-width: @desktop-width) {
   .site-nav {
     order: 0;
-    width: 380px;
-    min-height: 135px; /*временно*/
+
+    &__list {
+      width: 440px;
+      flex-wrap: wrap;
+      margin-left: -35px;
+    }
+
+    &__item:first-child {
+      box-shadow: 1px 0px 0px 0px rgba(236, 236, 236, 1);
+    }
+
+    &__link {
+      width: 184px;
+      padding-top: 30.5px;
+      padding-bottom: 34.5px;
+      padding-left: 35px;
+      font-size: 17px;
+    }
+
+    &__item--desktop {
+      display: block;
+    }
+
+    &__link--desktop {
+      font-size: 15px;
+      padding-top: 17px;
+      padding-bottom: 0;
+    }
   }
 }

@@ -79,12 +79,18 @@
 
     &__link--tablet {
       position: absolute;
-      bottom: -41px;
       right: 0;
       .font(15px; 400; 24px);
       padding: 0;
+      padding-top: 17px;
       box-shadow: none;
       text-align: right;
     }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .user-list {
+    width: 267px;
   }
 }
