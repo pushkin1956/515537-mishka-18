@@ -9,13 +9,7 @@
 
   &__item--interior {
     background-color: @bg-title-light;
-  }
 
-  &__item--toy {
-    background-color: @bg-title-dark;
-  }
-
-  &__item--interior {
     &::before {
       content: "";
 
@@ -29,9 +23,26 @@
       .bg-img("../../img/icon-interior.svg");
       opacity: 0.5;
     }
+
+    &:hover,
+    &:focus {
+      box-shadow: 0px -5px 0px 0px @bg-title-light;
+
+      .product-list__title {
+        padding-top: 23px;
+        padding-bottom: 34px;
+      }
+
+      &::before {
+        top: 18px;
+        opacity: 0.7;
+      }
+    }
   }
 
   &__item--toy {
+    background-color: @bg-title-dark;
+
     &::before {
       content: "";
 
@@ -45,40 +56,20 @@
       .bg-img("../../img/icon-toy.svg");
       opacity: 0.5;
     }
-  }
 
-  &__title {
-    width: 130px;
-    .pm-zero();
-    padding-top: 28px;
-    padding-bottom: 29px;
-    padding-left: 30px;
-    .font(19px; 700; 24px);
-    color: @title-color;
-    z-index: 0;
-  }
+    &:hover,
+    &:focus {
+      box-shadow: 0px -5px 0px 0px @bg-title-dark;
 
-  &__item--interior:hover,
-  &__item--interior:focus {
-    box-shadow: 0px -5px 0px 0px @bg-title-light;
-  }
+      .product-list__title {
+        padding-top: 23px;
+        padding-bottom: 34px;
+      }
 
-  &__item--toy:hover,
-  &__item--toy:focus {
-    box-shadow: 0px -5px 0px 0px @bg-title-dark;
-  }
-
-  &__item:hover,
-  &__item:focus {
-
-    .product-list__title {
-      padding-top: 23px;
-      padding-bottom: 34px;
-    }
-
-    &::before {
-      top: 16px;
-      opacity: 0.7;
+      &::before {
+        top: 16px;
+        opacity: 0.7;
+      }
     }
   }
 
@@ -92,6 +83,17 @@
       opacity: 0.3;
     }
   }
+
+  &__title {
+    width: 130px;
+    .pm-zero();
+    padding-top: 28px;
+    padding-bottom: 29px;
+    padding-left: 30px;
+    .font(19px; 700; 24px);
+    color: @title-color;
+    z-index: 0;
+  }
 }
 
 @media (min-width: @table-width) {
@@ -102,6 +104,52 @@
 
     &__item {
       width: 334px;
+    }
+
+    &__title {
+      padding-top: 33px;
+      padding-bottom: 32px;
+      padding-left: 36px;
+      .font(20px; 700; 30px);
+    }
+
+    &__item--interior {
+      &::before {
+        top: 30px;
+
+        &:hover,
+        &:focus {
+
+          .product-list__title {
+            padding-top: 28px;
+            padding-bottom: 37px;
+          }
+
+          &::before {
+            top: 25px;
+          }
+        }
+      }
+    }
+
+    &__item--toy {
+      &::before {
+        top: 31px;
+        right: 34px;
+
+        &:hover,
+        &:focus {
+
+          .product-list__title {
+            padding-top: 28px;
+            padding-bottom: 37px;
+          }
+
+          &::before {
+            top: 26px;
+          }
+        }
+      }
     }
   }
 }
