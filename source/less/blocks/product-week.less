@@ -1,42 +1,47 @@
 .product-week {
   .container(260px; 30px);
-  padding-bottom: 35px;
   margin: 0 auto;
+  padding-bottom: 35px;
 
   &__header {
-    height: 110px; /*временно для сетки*/
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 23px;
   }
 
   &__title {
+    order: 1;
     .pm-zero();
     .font(17px; 700; 20px);
+    text-transform: uppercase;
     color: @title-week;
   }
 
   &__title-product {
     .pm-zero();
+    padding-top: 32px;
+    padding-bottom: 5px;
     .font(25px; 700; 30px);
   }
 
   &__description {
-    height: 85px; /*временно для сетки*/
     .pm-zero();
+    margin-bottom: 15px;
   }
 
-  &__list-description {
-    width: 260px;
-    height: 150px; /*временно для сетки*/
+  &__image {
+    margin-bottom: 19px;
   }
 
   &__price {
     .pm-zero();
     .font(17px; 700; 24px);
-    height: 75px; /*временно для сетки*/
+    margin-bottom: 25px;
+    text-align: center;
   }
 
   &__order {
-    height: 52px; /*временно для сетки*/
-    width: 260px;
+    .button();
   }
 }
 
