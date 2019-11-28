@@ -1,7 +1,7 @@
 .product-week {
   .container(260px; 30px);
   margin: 0 auto;
-  padding-bottom: 35px;
+  margin-bottom: 35px;
 
   &__header {
     display: flex;
@@ -49,35 +49,56 @@
   .product-week {
     position: relative;
     .container(668px; 50px);
-    height: 610px; /*временно для сетки*/
+    margin-top: -18px;
+    .bg-img("../../img/bg-zigzag-fill.svg");
+    background-size: 768px 24px;
 
 
     &__header {
-      height: 95px; /*временно для сетки*/
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: 46px;
+    }
+
+    &__title {
+      width: 70px;
+      padding-left: 28px;
+      padding-right: 28px;
+      padding-bottom: 4px;
+      line-height: 20px;
+      text-align: center;
+    }
+
+    &__title-product {
+      padding-top: 60px;
+      padding-bottom: 0;
+      .font(43px; 700; 50px);
     }
 
     &__image {
       position: absolute;
       width: 334px;
       height: 404px;
-      top: 95px;
+      bottom: 0px;
       right: 50px;
+      margin: 0;
     }
 
     &__description {
-      width: 334px;
-    }
-
-    &__list-description {
-      width: 334px;
+      width: 290px;
+      .font(17px; 400; 30px);
+      margin-bottom: 35px;
     }
 
     &__price {
-      width: 334px;
+      width: 290px;
+      font-size: 20px;
+      margin-bottom: 35px;
     }
 
     &__order {
-      width: 334px;
+      width: 290px;
     }
   }
 }
