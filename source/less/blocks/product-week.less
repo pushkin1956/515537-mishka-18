@@ -1,7 +1,8 @@
 .product-week {
+  position: relative;
   .container(260px; 30px);
   margin: 0 auto;
-  margin-bottom: 35px;
+  padding-bottom: 35px;
   background-color: @bg-block-light;
 
   &__header {
@@ -43,6 +44,21 @@
 
   &__order {
     .button();
+  }
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    bottom: -6px;
+    right: 0;
+    z-index: 1;
+
+    width: 100%;
+    height: 7px;
+
+    .bg-img("../../img/bg-zigzag-line.svg");
+    background-size: 319px 7px;
   }
 }
 
@@ -124,7 +140,7 @@
     }
 
     &__image {
-      bottom: 0;
+      bottom: 35px;
       width: 525px;
       height: 635px;
 
