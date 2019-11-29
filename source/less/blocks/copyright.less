@@ -1,6 +1,29 @@
 .copyright {
-  height: 80px; /*временно*/
-  .center(182px);
+  position: relative;
+  display: flex;
+  .center(185px);
+
+  &__text {
+    .font(19px; 700; 18px);
+    padding-top: 27px;
+    padding-bottom: 31px;
+  }
+
+  &__link {
+    &::before {
+      content: "";
+
+      position: absolute;
+      top: 22px;
+      right: 2px;
+
+      width: 27px;
+      height: 34px;
+
+      .bg-img("../../img/logo-htmlacademy.svg");
+      background-size: 27px 34px;
+    }
+  }
 }
 
 @media (min-width: @table-width) {
