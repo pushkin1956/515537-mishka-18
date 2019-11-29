@@ -1,13 +1,13 @@
 .write-us {
   .container(260px; 30px);
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding-top: 34px;
+  // padding-bottom: 30px;
   margin: 0 auto;
 
   &__title {
     .pm-zero();
     .font(25px; 700; 30px);
-    height: 80px; /*временно для разметки*/
+    padding-bottom: 32px;
   }
 
   &__list {
@@ -16,8 +16,90 @@
   }
 
   &__item {
-    height: 115px; /*временно для сетки*/
+    position: relative;
+    padding-top: 55px;
+    margin-bottom: 28px;
+
+    &--flower::before {
+      content: "";
+
+      position: absolute;
+      top: 0;
+      left: 8px;
+
+      width: 60px;
+      height: 50px;
+
+      .bg-img("../../img/icon-feature-flower.svg");
+    }
+
+    &--money::before {
+      content: "";
+
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      width: 60px;
+      height: 50px;
+
+      .bg-img("../../img/icon-feature-money.svg");
+    }
+
+    &--heart::before {
+      content: "";
+
+      position: absolute;
+      top: 6px;
+      left: 7px;
+
+      width: 60px;
+      height: 50px;
+
+      .bg-img("../../img/icon-feature-heart.svg");
+    }
+
+    &--ball::before {
+      content: "";
+
+      position: absolute;
+      top: 3px;
+      left: 3px;
+
+      width: 60px;
+      height: 50px;
+
+      .bg-img("../../img/icon-feature-ball.svg");
+    }
+
+    &--rocket::before {
+      content: "";
+
+      position: absolute;
+      top: 4px;
+      left: -6px;
+
+      width: 60px;
+      height: 50px;
+
+      .bg-img("../../img/icon-feature-rocket.svg");
+    }
+
+    &--gift::before {
+      content: "";
+
+      position: absolute;
+      top: 2px;
+      left: 3px;
+
+      width: 60px;
+      height: 50px;
+
+      .bg-img("../../img/icon-feature-gift.svg");
+    }
   }
+
+
 
   &__item-title {
     .pm-zero();
