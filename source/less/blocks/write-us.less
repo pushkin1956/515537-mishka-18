@@ -7,7 +7,7 @@
   &__title {
     .pm-zero();
     .font(25px; 700; 30px);
-    padding-bottom: 32px;
+    margin-bottom: 32px;
   }
 
   &__list {
@@ -99,8 +99,6 @@
     }
   }
 
-
-
   &__item-title {
     .pm-zero();
     .font(17px; 700; 20px);
@@ -110,6 +108,8 @@
 @media (min-width: @table-width) {
   .write-us {
     .container(668px; 50px);
+    padding-top: 55px;
+    padding-bottom: 26px;
 
     &__list {
       display: flex;
@@ -118,6 +118,17 @@
 
     &__item {
       width: 334px;
+      margin-bottom: 56px;
+    }
+
+    &__title {
+      .font(43px; 700; 50px);
+      margin-left: -4px;
+      margin-bottom: 48px;
+    }
+
+    &__item-title {
+      .font(20px; 700; 22px);
     }
   }
 }
