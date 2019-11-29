@@ -5,6 +5,10 @@
     .container(260px; 30px);
     margin: 0 auto;
   }
+
+  &__icon {
+    display: none;
+  }
 }
 
 @media (min-width: @table-width) {
@@ -12,21 +16,21 @@
     &__wrapper {
       position: relative;
       display: flex;
-      justify-content: space-between;
       align-items: center;
       .container(668px; 50px);
-      height: 142px;
     }
 
-    &__wrapper::before {
-      content: "";
-
+    &__icon {
+      display: block;
+      position: relative;
       top: middle;
       left: 0;
-      width: 105px;
-      height: 50px;
 
-      background-color: rgba(211, 221, 125, 0.8); /*временно*/
+      width: 102px;
+      height: 34px;
+
+      padding-top: 50px;
+      padding-bottom: 58px;
     }
   }
 }
@@ -36,7 +40,6 @@
     &__wrapper {
       position: relative;
       display: flex;
-      justify-content: space-between;
       align-items: center;
       width: 1050px;
       height: 142px;

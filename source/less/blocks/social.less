@@ -13,3 +13,27 @@
     box-shadow: inset 0px -1px 0px 0px rgba(229, 229, 229, 1);
   }
 }
+
+@media (min-width: @table-width) {
+  .social {
+    margin-left: auto;
+
+    &__list {
+      padding-right: 84px;
+      box-shadow: none;
+    }
+  }
+}
+
+@media (min-width: @table-width) {
+  .social {
+    margin-left: 0;
+
+    &__list {
+      padding-right: 0;
+      padding-left: 0;
+      margin-left: 350px;
+      margin-right: 274px;
+    }
+  }
+}
