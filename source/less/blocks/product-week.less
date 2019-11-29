@@ -59,6 +59,7 @@
 
     .bg-img("../../img/bg-zigzag-line.svg");
     background-size: 319px 7px;
+    transform: scale(1, -1);
   }
 }
 
@@ -117,18 +118,11 @@
     }
 
     &::after {
-      content: "";
-
-      position: absolute;
-      bottom: -6px;
-      right: 0;
-      z-index: 1;
-
-      width: 100%;
       height: 17px;
 
       .bg-img("../../img/bg-zigzag-line.svg");
       background-size: 768px 17px;
+      transform: scale(1, -1);
     }
   }
 }
@@ -136,6 +130,7 @@
 @media (min-width: @desktop-width) {
   .product-week {
     width: 1050px;
+    padding-bottom: 90px;
 
     &__header {
       width: 1050px;
@@ -156,7 +151,7 @@
     }
 
     &__image {
-      bottom: 35px;
+      bottom: 90px;
       width: 525px;
       height: 635px;
 
@@ -178,6 +173,16 @@
 
     &__order {
       margin-left: 175px;
+    }
+
+    &::after {
+      left: 50px;
+
+      width: 1050px;
+      height: 23px;
+
+      .bg-img("../../img/bg-zigzag-line.svg");
+      background-size: 1050px 23px;
     }
   }
 }
