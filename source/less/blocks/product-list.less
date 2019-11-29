@@ -1,4 +1,5 @@
 .product-list {
+  position: relative;
   .pm-zero();
   .center(320px);
 
@@ -29,7 +30,7 @@
       box-shadow: 0px -5px 0px 0px @bg-title-light;
 
       .product-list__title {
-        padding-top: 23px;
+        padding-top: 21px;
         padding-bottom: 34px;
       }
 
@@ -62,7 +63,7 @@
       box-shadow: 0px -5px 0px 0px @bg-title-dark;
 
       .product-list__title {
-        padding-top: 23px;
+        padding-top: 21px;
         padding-bottom: 34px;
       }
 
@@ -87,9 +88,9 @@
   &__title {
     width: 130px;
     .pm-zero();
-    padding-top: 28px;
+    padding-top: 26px;
     padding-bottom: 29px;
-    padding-left: 30px;
+    padding-left: 29px;
     .font(19px; 700; 24px);
     color: @title-color;
     z-index: 0;
@@ -102,13 +103,28 @@
     .container(668px; 50px);
     margin: 0 auto;
 
+    &::before {
+      content: "";
+
+      position: absolute;
+      bottom: -5px;
+      right: 0;
+      z-index: 1;
+
+      width: 100%;
+      height: 24px;
+
+      .bg-img("../../img/bg-zigzag-fill.svg");
+      background-size: 768px 24px;
+    }
+
     &__item {
       width: 334px;
     }
 
     &__title {
-      padding-top: 33px;
-      padding-bottom: 32px;
+      padding-top: 28px;
+      padding-bottom: 37px;
       padding-left: 36px;
       .font(20px; 700; 30px);
     }
@@ -157,6 +173,13 @@
 @media (min-width: @desktop-width) {
   .product-list {
     width: 1050px;
+
+    &::before {
+      bottom: -11px;
+
+      height: 34px;
+      background-size: 1150px 34px;
+    }
 
     &__item {
       width: 525px;
