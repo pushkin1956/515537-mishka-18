@@ -1,8 +1,8 @@
 .write-us {
   .container(260px; 30px);
   padding-top: 34px;
-  // padding-bottom: 30px;
   margin: 0 auto;
+  background-color: @bg-block-light;
 
   &__title {
     .pm-zero();
@@ -136,9 +136,15 @@
 @media (min-width: @desktop-width) {
   .write-us {
     .container(700px; 225px);
+    padding-top: 66px;
+    padding-bottom: 32px;
 
     &__item {
       width: 350px;
+    }
+
+    &__title {
+      .font(53px; 700; 57px);
     }
   }
 }
