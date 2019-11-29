@@ -9,19 +9,23 @@
     padding-bottom: 31px;
   }
 
-  &__link {
-    &::before {
-      content: "";
+  &__logo {
+    position: absolute;
+    top: 22px;
+    right: 2px;
 
-      position: absolute;
-      top: 22px;
-      right: 2px;
+    width: 27px;
+    height: 34px;
 
-      width: 27px;
-      height: 34px;
+    &:hover,
+    &:focus {
+      path {
+        fill: @icon-color;
+      }
+    }
 
-      .bg-img("../../img/logo-htmlacademy.svg");
-      background-size: 27px 34px;
+    &:active {
+      opacity: 0.3;
     }
   }
 }

@@ -12,6 +12,17 @@
     list-style: none;
     box-shadow: inset 0px -1px 0px 0px rgba(229, 229, 229, 1);
   }
+
+  &__icon:hover,
+  &__icon:focus {
+    path {
+      fill: @icon-color;
+    }
+  }
+
+  &__icon:active {
+    opacity: 0.3;
+  }
 }
 
 @media (min-width: @table-width) {
@@ -25,7 +36,7 @@
   }
 }
 
-@media (min-width: @table-width) {
+@media (min-width: @desktop-width) {
   .social {
     margin-left: 0;
 
