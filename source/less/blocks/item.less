@@ -1,16 +1,19 @@
 .item {
-  padding-top: 30px;
-  padding-bottom: 30px;
+  margin-top: 30px;
+  border: 1px solid rgba(229, 229, 229, 1);
 
   &__header {
-    height: 55px; /*временно для сетки*/
-    padding: 30px 0;
-    padding-left: 28px;
+    padding: 22px 0;
+    margin-left: 28px;
+    margin-right: 28px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgba(229, 229, 229, 1);
   }
 
   &__title {
     .pm-zero();
     .font(17px; 700; 24px);
+    margin-bottom: 7px;
   }
 
   &__description {
@@ -19,9 +22,24 @@
   }
 
   &__price {
+    position: relative;
     display: block;
-    height: 75px; /*временно для сетки*/
-    padding-left: 28px;
+    margin-left: 28px;
+    margin-right: 28px;
+    margin-bottom: 28px;
+  }
+
+  &__icon {
+    position: absolute;
+    top: 1px;
+    right: -1px;
+
+    width: 20px;
+    height: 19px;
+
+    path {
+      fill: rgba(0, 0, 0, 0.2);
+    }
   }
 }
 
