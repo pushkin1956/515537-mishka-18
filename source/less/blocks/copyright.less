@@ -1,28 +1,38 @@
 .copyright {
   position: relative;
-  display: flex;
   .center(185px);
+
+  &__link {
+    display: block;
+
+    &:hover,
+    &:focus {
+      .copyright__logo {
+        path {
+          fill: @icon-color;
+        }
+      }
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
 
   &__text {
     .font(19px; 700; 18px);
-    padding-top: 27px;
-    padding-bottom: 31px;
+    color: @link-color;
+    padding-top: 55px;
+    padding-bottom: 58px;
   }
 
   &__logo {
     position: absolute;
-    top: 22px;
-    right: 2px;
+    top: -2px;
+    right: 0;
 
     width: 27px;
     height: 34px;
-
-    &:hover,
-    &:focus {
-      path {
-        fill: @icon-color;
-      }
-    }
 
     &:active {
       opacity: 0.3;
