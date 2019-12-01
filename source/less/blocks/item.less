@@ -100,6 +100,11 @@
 
 @media (min-width: @desktop-width) {
   .item {
+
+    &:not(:last-child) {
+      margin-bottom: 0;
+    }
+
     &__link {
       display: block;
     }
@@ -111,10 +116,14 @@
 
     &__header {
       width: 287px;
+      min-height: 97px;
+      padding-top: 20px;
     }
 
     &__price {
-      margin: 0;
+      width: 256px;
+      margin-top: 0;
+      padding-bottom: 25px;
     }
   }
 }
