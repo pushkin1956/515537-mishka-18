@@ -1,6 +1,9 @@
 .item {
-  margin-top: 30px;
   border: 1px solid rgba(229, 229, 229, 1);
+
+  &:not(:last-child) {
+    margin-bottom: 30px;
+  }
 
   &__header {
     padding: 22px 0;
@@ -45,8 +48,10 @@
 
 @media (min-width: @table-width) {
   .item {
-    padding-top: 0;
-    padding-bottom: 53px;
+
+    &:not(:last-child) {
+      margin-bottom: 52px;
+    }
 
     &__link {
       display: flex;
@@ -60,12 +65,35 @@
 
     &__header {
       width: 306px;
+      .pm-zero();
+      padding-top: 25px;
+      margin-left: 26px;
+      border: none;
+    }
+
+    &__title {
+      width: 230px;
+      .font(20px; 700; 24px);
+      margin-bottom: 5px;
+    }
+
+    &__description {
+      .font(15px; 400; 30px);
     }
 
     &__price {
+      width: 268px;
       margin-left: auto;
+      margin-right: 32px;
       margin-top: -75px;
-      margin-right: 230px;
+      margin-bottom: 0;
+      padding-top: 23px;
+      .font(17px; 700; 24px);
+      border-top: 1px solid rgba(229, 229, 229, 1);
+    }
+
+    &__icon {
+      top: 22px;
     }
   }
 }
