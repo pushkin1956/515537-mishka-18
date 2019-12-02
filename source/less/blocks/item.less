@@ -5,6 +5,35 @@
     margin-bottom: 30px;
   }
 
+  &:hover,
+  &:focus {
+    box-shadow: 0px 6px 10px 0px rgba(0, 0, 0, 0.1);
+  }
+
+  &:active {
+    box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.1);
+  }
+
+  &:hover &__title,
+  &:focus &__title {
+    opacity: 0.6;
+  }
+
+  &:active &__title {
+    opacity: 0.3;
+  }
+
+  &:hover &__icon,
+  &:focus &__icon {
+    path {
+      fill: #63d1bb;
+    }
+  }
+
+  &:active &__icon {
+    opacity: 0.3;
+  }
+
   &__header {
     padding: 22px 0;
     margin-left: 28px;
