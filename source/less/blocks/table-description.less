@@ -1,0 +1,45 @@
+.table-description {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 27px;
+
+  &__row {
+    border-bottom: 1px solid @table-border;
+  }
+
+  &__column1,
+  &__column2 {
+    vertical-align: baseline;
+  }
+
+  &__column1 {
+    width: 38%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    line-height: 20px;
+  }
+}
+
+@media (min-width: @table-width) {
+  .table-description {
+    width: 290px;
+    margin-bottom: 56px;
+
+    &__column1 {
+      width: 34%;
+      padding-top: 9px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .table-description {
+    margin-bottom: 107px;
+
+    &__column1 {
+      width: 34%;
+      padding-top: 8px;
+      padding-bottom: 12px;
+    }
+  }
+}

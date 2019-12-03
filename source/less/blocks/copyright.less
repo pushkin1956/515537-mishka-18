@@ -1,6 +1,44 @@
 .copyright {
-  height: 80px; /*временно*/
-  .center(182px);
+  position: relative;
+  .center(185px);
+
+  &__link {
+    display: block;
+
+    &:hover,
+    &:focus {
+      .copyright__logo {
+        path {
+          fill: @icon-color;
+        }
+      }
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
+
+  &__text {
+    display: block;
+    .font(19px; 700; 18px);
+    color: @link-color;
+    padding-top: 27px;
+    padding-bottom: 33px;
+  }
+
+  &__logo {
+    position: absolute;
+    top: 22px;
+    right: 0;
+
+    width: 27px;
+    height: 34px;
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
 }
 
 @media (min-width: @table-width) {

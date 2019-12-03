@@ -1,42 +1,77 @@
 .product-week {
+  position: relative;
   .container(260px; 30px);
-  padding-bottom: 35px;
   margin: 0 auto;
+  padding-bottom: 35px;
+  background-color: @bg-block-light;
 
   &__header {
-    height: 110px; /*временно для сетки*/
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 23px;
   }
 
   &__title {
+    order: 1;
     .pm-zero();
     .font(17px; 700; 20px);
+    text-transform: uppercase;
     color: @title-week;
   }
 
   &__title-product {
     .pm-zero();
+    padding-top: 28px;
+    padding-bottom: 5px;
     .font(25px; 700; 30px);
   }
 
   &__description {
-    height: 85px; /*временно для сетки*/
     .pm-zero();
+    margin-bottom: 15px;
   }
 
-  &__list-description {
-    width: 260px;
-    height: 150px; /*временно для сетки*/
+  &__image {
+    margin-bottom: 19px;
   }
 
   &__price {
     .pm-zero();
     .font(17px; 700; 24px);
-    height: 75px; /*временно для сетки*/
+    margin-bottom: 25px;
+    text-align: center;
   }
 
   &__order {
-    height: 52px; /*временно для сетки*/
-    width: 260px;
+    .button();
+  }
+
+  &__order:hover,
+  &__order:focus {
+    background-color: #444444;
+    color: rgba(255, 255, 255, 1);
+
+    cursor: pointer;
+  }
+
+  &__order:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    bottom: -6px;
+    right: 0;
+    z-index: 1;
+
+    width: 100%;
+    height: 7px;
+
+    .bg-img("../../img/bg-zigzag-line.svg");
+    background-size: 319px 7px;
+    transform: scale(1, -1);
   }
 }
 
@@ -44,35 +79,62 @@
   .product-week {
     position: relative;
     .container(668px; 50px);
-    height: 610px; /*временно для сетки*/
-
+    padding-bottom: 63px;
 
     &__header {
-      height: 95px; /*временно для сетки*/
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: 48px;
+    }
+
+    &__title {
+      width: 70px;
+      padding-left: 28px;
+      padding-right: 28px;
+      padding-bottom: 4px;
+      line-height: 20px;
+      text-align: center;
+    }
+
+    &__title-product {
+      padding-top: 40px;
+      padding-bottom: 0;
+      margin-left: -3px;
+      .font(43px; 700; 50px);
     }
 
     &__image {
       position: absolute;
       width: 334px;
       height: 404px;
-      top: 95px;
+      bottom: 63px;
       right: 50px;
+      margin: 0;
     }
 
     &__description {
-      width: 334px;
-    }
-
-    &__list-description {
-      width: 334px;
+      width: 290px;
+      .font(17px; 400; 30px);
+      margin-bottom: 35px;
     }
 
     &__price {
-      width: 334px;
+      width: 290px;
+      font-size: 20px;
+      margin-bottom: 35px;
     }
 
     &__order {
-      width: 334px;
+      width: 290px;
+    }
+
+    &::after {
+      height: 17px;
+
+      .bg-img("../../img/bg-zigzag-line.svg");
+      background-size: 768px 17px;
+      transform: scale(1, -1);
     }
   }
 }
@@ -80,19 +142,35 @@
 @media (min-width: @desktop-width) {
   .product-week {
     width: 1050px;
+    padding-bottom: 90px;
 
     &__header {
       width: 1050px;
+      flex-direction: row-reverse;
+      justify-content: flex-end;
+    }
+
+    &__title {
+      margin-left: 20px;
+      margin-right: 30px;
+    }
+
+    &__title-product {
+      padding-top: 118px;
+      font-size: 53px;
+      line-height: 57px;
+      z-index: 1;
     }
 
     &__image {
-      top: 0;
+      bottom: 90px;
       width: 525px;
       height: 635px;
     }
 
     &__description {
       margin-left: 175px;
+      margin-bottom: 48px;
     }
 
     &__list-description {
@@ -101,10 +179,21 @@
 
     &__price {
       margin-left: 175px;
+      margin-bottom: 34px;
     }
 
     &__order {
       margin-left: 175px;
+    }
+
+    &::after {
+      left: 50px;
+
+      width: 1050px;
+      height: 23px;
+
+      .bg-img("../../img/bg-zigzag-line.svg");
+      background-size: 1050px 23px;
     }
   }
 }

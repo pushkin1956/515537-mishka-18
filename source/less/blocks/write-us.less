@@ -1,13 +1,13 @@
 .write-us {
   .container(260px; 30px);
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding-top: 34px;
   margin: 0 auto;
+  background-color: @bg-block-light;
 
   &__title {
     .pm-zero();
     .font(25px; 700; 30px);
-    height: 80px; /*временно для разметки*/
+    margin-bottom: 32px;
   }
 
   &__list {
@@ -15,8 +15,94 @@
     list-style: none;
   }
 
+  &__column1-list,
+  &__column2-list {
+    .pm-zero();
+    list-style: none;
+  }
+
   &__item {
-    height: 115px; /*временно для сетки*/
+    position: relative;
+    padding-top: 55px;
+    margin-bottom: 28px;
+
+    &--flower::before {
+      content: "";
+
+      position: absolute;
+      top: 0;
+      left: 8px;
+
+      width: 60px;
+      height: 50px;
+
+      .bg-img("../../img/icon-feature-flower.svg");
+    }
+
+    &--money::before {
+      content: "";
+
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      width: 60px;
+      height: 50px;
+
+      .bg-img("../../img/icon-feature-money.svg");
+    }
+
+    &--heart::before {
+      content: "";
+
+      position: absolute;
+      top: 6px;
+      left: 7px;
+
+      width: 60px;
+      height: 50px;
+
+      .bg-img("../../img/icon-feature-heart.svg");
+    }
+
+    &--ball::before {
+      content: "";
+
+      position: absolute;
+      top: 3px;
+      left: 3px;
+
+      width: 60px;
+      height: 50px;
+
+      .bg-img("../../img/icon-feature-ball.svg");
+    }
+
+    &--rocket::before {
+      content: "";
+
+      position: absolute;
+      top: 4px;
+      left: -6px;
+
+      width: 60px;
+      height: 50px;
+
+      .bg-img("../../img/icon-feature-rocket.svg");
+    }
+
+    &--gift::before {
+      content: "";
+
+      position: absolute;
+      top: 2px;
+      left: 3px;
+
+      width: 60px;
+      height: 50px;
+
+      .bg-img("../../img/icon-feature-gift.svg");
+    }
   }
 
   &__item-title {
@@ -28,6 +114,8 @@
 @media (min-width: @table-width) {
   .write-us {
     .container(668px; 50px);
+    padding-top: 55px;
+    padding-bottom: 26px;
 
     &__list {
       display: flex;
@@ -36,6 +124,17 @@
 
     &__item {
       width: 334px;
+      margin-bottom: 56px;
+    }
+
+    &__title {
+      .font(43px; 700; 50px);
+      margin-left: -4px;
+      margin-bottom: 48px;
+    }
+
+    &__item-title {
+      .font(20px; 700; 22px);
     }
   }
 }
@@ -43,9 +142,15 @@
 @media (min-width: @desktop-width) {
   .write-us {
     .container(700px; 225px);
+    padding-top: 66px;
+    padding-bottom: 32px;
 
     &__item {
       width: 350px;
+    }
+
+    &__title {
+      .font(53px; 700; 57px);
     }
   }
 }

@@ -1,10 +1,13 @@
 .page-footer {
-  background-color: @bg-block;
+  background-color: @bg-block-dark;
 
   &__wrapper {
     .container(260px; 30px);
     margin: 0 auto;
-    height: 160px; /*временно для сетки*/
+  }
+
+  &__logo {
+    display: none;
   }
 }
 
@@ -13,21 +16,32 @@
     &__wrapper {
       position: relative;
       display: flex;
-      justify-content: space-between;
       align-items: center;
       .container(668px; 50px);
-      height: 142px;
     }
 
-    &__wrapper::before {
-      content: "";
-
+    &__logo {
+      display: block;
+      position: relative;
       top: middle;
       left: 0;
-      width: 105px;
-      height: 50px;
 
-      background-color: rgba(211, 221, 125, 0.8); /*временно*/
+      width: 102px;
+      height: 34px;
+
+      padding-top: 50px;
+      padding-bottom: 58px;
+    }
+
+    &__logo:hover,
+    &__logo:focus {
+      path {
+        fill: @icon-color;
+      }
+    }
+
+    &__logo:active {
+      opacity: 0.3;
     }
   }
 }
@@ -37,7 +51,6 @@
     &__wrapper {
       position: relative;
       display: flex;
-      justify-content: space-between;
       align-items: center;
       width: 1050px;
       height: 142px;

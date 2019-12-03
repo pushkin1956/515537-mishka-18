@@ -1,6 +1,5 @@
 .catalog {
   .container(260px; 30px);
-  padding-top: 80px;
   margin: 0 auto;
 
   &__list {
@@ -12,17 +11,19 @@
 @media (min-width: @table-width) {
   .catalog {
     .container(668px; 50px);
+    padding-top: 42px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .catalog {
     width: 1050px;
-    padding-top: 130px;
+    padding-top: 85px;
 
     &__list {
       display: flex;
       justify-content: space-between;
+      align-items: flex-start;
     }
   }
 }

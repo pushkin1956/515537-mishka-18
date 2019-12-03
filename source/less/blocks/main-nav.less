@@ -3,23 +3,112 @@
   .center(320px);
 
   &__toggle {
-    position: absolute;
-    right: 0;
-    top: -50px;
-  }
-
-  &__site {
-    min-height: 158px; /*временно*/
-  }
-
-  &__list {
     .pm-zero();
-    list-style: none;
+    position: absolute;
+    top: -80px;
+    right: 0;
+
+    display: block;
+    width: 80px;
+    height: 80px;
+
+    background-color: transparent;
+
+    cursor: pointer;
+    border: none;
   }
 
-  &__link {
-    .font(17px; 700; 24px);
-    color: @link-color;
+  &--closed &__toggle {
+    &::before {
+      content: "";
+
+      position: absolute;
+      top: 32px;
+      right: 31px;
+
+      width: 20px;
+      height: 2px;
+
+      background-color: #221f1f;
+      box-shadow: 0 6px 0 0 #221f1f, 0 12px 0 0 #221f1f;
+    }
+
+    &:hover::before,
+    &:focus::before {
+      opacity: 0.6;
+    }
+
+    &:active::before {
+      opacity: 0.3;
+    }
+  }
+
+  &--opened &__toggle {
+    &::before,
+    &::after {
+      content: "";
+
+      position: absolute;
+      top: 38px;
+      right: 27px;
+
+      width: 27px;
+      height: 2px;
+
+      background-color: #221f1f;
+    }
+
+    &::before {
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+    }
+
+    &:hover::before,
+    &:focus::before,
+    &:hover::after,
+    &:focus::after {
+      opacity: 0.6;
+    }
+
+    &:active::before,
+    &:active::after {
+      opacity: 0.3;
+    }
+  }
+}
+
+@media (max-width: @mobile-only) {
+  .main-nav {
+    &--closed .site-nav {
+      display: none;
+    }
+
+    &--closed .search-form {
+      display: none;
+    }
+
+    &--closed .user-list {
+      display: none;
+    }
+
+    &--nojs &__toggle {
+      display: none;
+    }
+
+    &--nojs .site-nav {
+      display: block;
+    }
+
+    &--nojs .search-form {
+      display: block;
+    }
+
+    &--nojs .user-list {
+      display: block;
+    }
   }
 }
 
@@ -32,22 +121,6 @@
 
     &__toggle {
       display: none;
-    }
-
-    &__site {
-      order: 1;
-      min-height: 41px; /*временно*/
-      width: 330px;
-    }
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .main-nav {
-    &__site {
-      order: 0;
-      width: 380px;
-      min-height: 135px; /*временно*/
     }
   }
 }

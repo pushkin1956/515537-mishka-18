@@ -1,22 +1,30 @@
 .page-main {
   .bg-img("../img/hero-mobile@1x.jpg");
+  background-position: 50% -18px;
 
   &__title {
     .pm-zero();
     padding-top: 70px;
-    padding-bottom: 120px;
+    padding-bottom: 122px;
     .container(260px; 30px);
     .font(27px; 700; 30px);
     margin: 0 auto;
+    text-align: center;
   }
 }
 
 @media (min-width: @table-width) {
   .page-main {
+    .bg-img("../../img/hero-tablet@1x.jpg");
+    background-position: 50% 0;
+    background-color: @bg-main;
+
     &__title {
       .container(668px; 50px);
-      padding-top: 158px;
-      padding-bottom: 368px;
+      padding-top: 154px;
+      padding-bottom: 372px;
+      font-size: 43px;
+      line-height: 50px;
     }
   }
 }
@@ -26,6 +34,8 @@
     &__title {
       width: 1050px;
       padding-bottom: 358px;
+      font-size: 53px;
+      line-height: 57px;
     }
   }
 }
