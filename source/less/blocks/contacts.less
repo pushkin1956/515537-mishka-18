@@ -1,7 +1,7 @@
 .contacts {
   .center(320px);
-  padding-top: 40px;
-  padding-bottom: 40px;
+  padding-top: 41px;
+  padding-bottom: 39px;
 
   &__wrapper {
     .container(260px; 30px);
@@ -11,26 +11,68 @@
   &__title {
     .pm-zero();
     .font(18px; 700; 30px);
-    margin-bottom: 30px;
+    margin-bottom: 29px;
+    margin-left: -2px;
   }
 
   &__list {
-    margin-bottom: 40px;
+    margin-bottom: 37px;
   }
 
   &__email {
+    display: flex;
     .pm-zero();
+    margin-bottom: 30px;
+    & {
+      a {
+        margin-left: 30px;
+        padding-bottom: 2px;
+        color: @link-color;
+        border-bottom: 1px solid #62d1ba;
+
+        &:hover,
+        &:focus {
+          color: #46c1ae;
+          border-color: #46c1ae;
+        }
+
+        &:active {
+          opacity: 0.3;
+        }
+      }
+    }
   }
 
   &__address {
+    display: flex;
     .pm-zero();
+    line-height: 30px;
+    & {
+      span {
+        width: 141px;
+        margin-left: 30px;
+      }
+    }
   }
 
   &__map {
+    position: relative;
     display: block;
     width: 320px;
     height: 457px;
-    margin-bottom: 40px;
+    margin-bottom: 39px;
+
+    &::after {
+      content: "";
+
+      position: absolute;
+      top: 145px;
+      left: 138px;
+
+      width: 67px;
+      height: 100px;
+      .bg-img("../../img/icon-map-pin.svg");
+    }
   }
 
   &__img {
@@ -40,8 +82,20 @@
 
   &__button-feedback {
     display: block;
-    height: 52px; /*временно*/
+    box-sizing: border-box;
+    .button();
+    padding: 14px 0;
     .center(260px);
+
+    &:hover,
+    &:focus {
+      background-color: #444444;
+      color: rgba(255, 255, 255, 1);
+    }
+
+    &:active {
+      color: rgba(255, 255, 255, 0.3);
+    }
   }
 }
 
