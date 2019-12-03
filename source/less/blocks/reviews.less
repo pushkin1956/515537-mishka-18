@@ -47,20 +47,55 @@
   }
 
   &__prev {
+    position: relative;
     box-sizing: border-box;
     .button(130px; 52px);
     border: 1px solid rgba(229, 229, 229, 1);
     border-right: none;
-    .bg-img("../../img/icon-left-arrow.svg");
-    background-position: 37px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 37px;
+      top: 12px;
+      width: 50px;
+      height: 26px;
+     .bg-img("../../img/icon-left-arrow.svg");
+    }
   }
 
   &__next {
+    position: relative;
     box-sizing: border-box;
     .button(130px; 52px);
     border: 1px solid rgba(229, 229, 229, 1);
-    .bg-img("../../img/icon-right-arrow.svg");
-    background-position: 37px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 37px;
+      top: 12px;
+      width: 50px;
+      height: 26px;
+     .bg-img("../../img/icon-right-arrow.svg");
+    }
+  }
+
+  &__prev:hover,
+  &__prev:focus,
+  &__next:hover,
+  &__next:focus {
+    cursor: pointer;
+    &::after {
+      opacity: 0.6;
+    }
+  }
+
+  &__prev:active,
+  &__next:active {
+    &::after {
+      opacity: 0.3;
+    }
   }
 
   &__write {
@@ -68,6 +103,16 @@
     box-sizing: border-box;
     .button();
     padding: 14px 0;
+
+    &:hover,
+    &:focus {
+      background-color: #444444;
+      color: rgba(255, 255, 255, 1);
+    }
+
+    &:active {
+      color: rgba(255, 255, 255, 0.3);
+    }
   }
 
   &::after {
