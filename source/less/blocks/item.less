@@ -1,41 +1,16 @@
 .item {
-  border: 1px solid rgba(229, 229, 229, 1);
-
   &:not(:last-child) {
     margin-bottom: 30px;
   }
 
-  &:hover,
-  &:focus {
-    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
-  }
-
-  &:active {
-    box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
-  }
-
-  &:hover &__title,
-  &:focus &__title {
-    opacity: 0.6;
-  }
-
-  &:active &__title {
-    opacity: 0.3;
-  }
-
-  &:hover &__icon,
-  &:focus &__icon {
-    path {
-      fill: #63d1bb;
-    }
-  }
-
-  &:active &__icon {
-    opacity: 0.3;
+  &__header-box {
+    margin-top: -7px;
+    border: 1px solid rgba(229, 229, 229, 1);
   }
 
   &__header {
-    padding: 22px 0;
+    padding-top: 28px;
+    padding-bottom: 22px;
     margin-left: 28px;
     margin-right: 28px;
     margin-bottom: 20px;
@@ -73,17 +48,58 @@
       fill: rgba(0, 0, 0, 0.2);
     }
   }
+
+  &:hover,
+  &:focus {
+    cursor: pointer;
+    .item__header-box {
+      box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  &:active {
+    .item__header-box {
+      box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  &:hover &__title,
+  &:focus &__title {
+    opacity: 0.6;
+  }
+
+  &:active &__title {
+    opacity: 0.3;
+  }
+
+  &:hover &__icon,
+  &:focus &__icon {
+    path {
+      fill: #63d1bb;
+    }
+  }
+
+  &:active &__icon {
+    opacity: 0.3;
+  }
 }
 
 @media (min-width: @table-width) {
   .item {
     &:not(:last-child) {
-      margin-bottom: 52px;
+      margin-bottom: 54px;
+    }
+
+    &__header-box {
+      margin-top: 0;
+      border-left: none;
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
     }
 
     &__link {
       display: flex;
-      flex-wrap: wrap;
     }
 
     &__image {
@@ -113,8 +129,7 @@
       width: 268px;
       margin-left: auto;
       margin-right: 32px;
-      margin-top: -75px;
-      margin-bottom: 0;
+      margin-bottom: 25px;
       padding-top: 23px;
       .font(17px; 700; 24px);
       border-top: 1px solid rgba(229, 229, 229, 1);
@@ -132,6 +147,11 @@
       margin-bottom: 0;
     }
 
+    &__header-box {
+      margin-top: -7px;
+      border-left: 1px solid rgba(229, 229, 229, 1);
+    }
+
     &__link {
       display: block;
     }
@@ -144,13 +164,12 @@
     &__header {
       width: 287px;
       min-height: 97px;
-      padding-top: 20px;
+      padding-top: 27px;
     }
 
     &__price {
       width: 256px;
       margin-top: 0;
-      padding-bottom: 25px;
     }
   }
 }
