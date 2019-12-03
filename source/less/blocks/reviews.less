@@ -4,6 +4,7 @@
   padding-top: 27px;
   padding-bottom: 45px;
   margin: 0 auto;
+  background-color: @bg-block-light;
 
   &__title {
     .pm-zero();
@@ -73,7 +74,7 @@
     &::after {
       content: "";
       position: absolute;
-      left: 37px;
+      right: 40px;
       top: 12px;
       width: 50px;
       height: 26px;
@@ -134,39 +135,73 @@
 
 @media (min-width: @table-width) {
   .reviews {
-    position: relative;
     .container(668px; 50px);
-    padding-top: 80px;
-    padding-bottom: 50px;
+    padding-top: 77px;
+    padding-bottom: 79px;
     margin-bottom: 68px;
     .bg-img("../../img/review@1x.jpg");
 
-    &__title {
-      margin-bottom: 50px;
-      width: 490px;
+    &__wrapper {
+      position: relative;
     }
+
+    &__title {
+      width: 490px;
+      margin-left: -5px;
+      margin-bottom: 50px;
+      .font(43px; 700; 50px);
+    }
+
+    &__list {
+    margin-bottom: 50px;
+  }
 
     &__author-name {
       width: 255px;
+      font-size: 18px;
     }
 
     &__text {
-      margin-bottom: 64px;
+      margin-bottom: 56px;
+      .font(17px; 400; 30px);
+      color: #444444;
     }
 
     &__buttons {
       position: absolute;
-      right: 0;
-      bottom: 50px;
-      width: 167px;
+      right: 8px;
+      bottom: 0;
+      width: 160px;
       margin: 0;
+    }
+
+    &__prev {
+      border: none;
+      &::after {
+        left: 12px;
+      }
+    }
+
+    &__next {
+      border: none;
+      &::after {
+        right: 11px;
+      }
     }
 
     &__write {
       position: absolute;
-      top: 80px;
-      right: 0;
-      width: 170px;
+      top: 79px;
+      right: 50px;
+      width: 175px;
+    }
+
+    &::after {
+      height: 17px;
+
+      .bg-img("../../img/bg-zigzag-line.svg");
+      background-size: 768px 17px;
+      transform: scale(1, -1);
     }
   }
 }
