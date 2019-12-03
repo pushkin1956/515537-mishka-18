@@ -209,8 +209,8 @@
 @media (min-width: @desktop-width) {
   .reviews {
     width: 1050px;
-    padding-top: 75px;
-    padding-bottom: 100px;
+    padding-top: 71px;
+    padding-bottom: 130px;
     margin-bottom: 60px;
     background-position: left 50px top;
 
@@ -219,15 +219,31 @@
     }
 
     &__title {
-      margin-bottom: 45px;
+      margin-bottom: 48px;
+      .font(53px; 700; 57px);
+    }
+
+    &__author-name {
+      font-size: 17px;
     }
 
     &__text {
-      margin-bottom: 45px;
+      width: 770px;
+      margin-bottom: 40px;
     }
 
     &__buttons {
-      bottom: 100px;
+      bottom: 2px;
+    }
+
+    &::after {
+      left: 50px;
+
+      width: 1050px;
+      height: 23px;
+
+      .bg-img("../../img/bg-zigzag-line.svg");
+      background-size: 1050px 23px;
     }
   }
 }
