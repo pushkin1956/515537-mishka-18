@@ -181,15 +181,25 @@
 
 @media (min-width: @desktop-width) {
   .contacts {
-    position: relative;
     .container(1050px; 50px);
     display: flex;
+    padding-top: 78px;
     padding-bottom: 105px;
+
+    &::before {
+      top: 140px;
+      left: 113px;
+    }
 
     &__wrapper {
       .pm-zero();
       width: 350px;
       padding-left: 175px;
+    }
+
+    &__title {
+      margin-top: 71px;
+      .font(53px; 700; 57px);
     }
 
     &__list {
@@ -200,6 +210,11 @@
       width: 525px;
       height: 457px;
       margin: 0;
+
+      &::after {
+        top: 146px;
+        left: 238px;
+      }
     }
 
     &__img {
