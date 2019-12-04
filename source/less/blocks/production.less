@@ -1,28 +1,83 @@
 .production {
   .container(260px; 30px);
-  padding-bottom: 33px;
   margin: 0 auto;
-  margin-bottom: 59px;
+  margin-bottom: 58px;
+
+  &__wrapper {
+    position: relative;
+    box-sizing: border-box;
+    border: 1px solid rgba(229, 229, 229, 1);
+    .center(260px);
+
+    &::before {
+      content: "";
+
+      position: absolute;
+
+      top: 132px;
+      left: 80px;
+      z-index: 1;
+
+      width: 101px;
+      height: 77px;
+      .bg-img("../../img/icon-play.svg");
+    }
+  }
 
   &__title {
+    position: relative;
+    width: 130px;
     .pm-zero();
-    padding-top: 25px;
-    padding-bottom: 25px;
+    margin-left: auto;
+    margin-right: 40px;
+    padding-top: 24px;
+    padding-bottom: 23px;
+    padding-left: 60px;
     .font(17px; 700; 24px);
+
+    &::before {
+      content: "";
+
+      position: absolute;
+
+      top: 29px;
+      left: 5px;
+
+      width: 32px;
+      height: 32px;
+      .bg-img("../../img/icon-video.svg");
+    }
+  }
+
+  &__video {
+    position: relative;
+    left: -1px;
   }
 
   &__description {
     .pm-zero();
-    padding-top: 34px;
-    padding-bottom: 28px;
+    padding-top: 21px;
+    padding-right: 42px;
+    padding-bottom: 25px;
+    padding-left: 33px;
     font-size: 13px;
   }
 
   &__order {
     display: block;
-    height: 52px; /*временно*/
-    width: 192px;
+    .button(193px);
     margin: 0 auto;
+    margin-bottom: 32px;
+
+    &:hover,
+    &:focus {
+      background-color: #444444;
+      color: rgba(255, 255, 255, 1);
+    }
+
+    &:active {
+      color: rgba(255, 255, 255, 0.3);
+    }
   }
 }
 
