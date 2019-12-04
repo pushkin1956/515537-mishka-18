@@ -2,6 +2,7 @@
   .center(320px);
   padding-top: 41px;
   padding-bottom: 39px;
+  background-color: @bg-block-light;
 
   &__wrapper {
     .container(260px; 30px);
@@ -101,35 +102,70 @@
 
 @media (min-width: @table-width) {
   .contacts {
+    position: relative;
     .center(@table-width);
-    padding-top: 65px;
-    padding-bottom: 58px;
+    padding-top: 67px;
+    padding-bottom: 57px;
+
+    &::before {
+      content: "";
+
+      position: absolute;
+      top: 52px;
+      right: 53px;
+
+      width: 47px;
+      height: 81px;
+      .bg-img("../../img/icon-flag.svg");
+    }
 
     &__wrapper {
       .container(668px; 50px);
     }
 
     &__title {
+      margin-left: -4px;
       margin-bottom: 50px;
+      .font(43px; 700; 50px);
     }
 
     &__list {
       display: flex;
-      margin-bottom: 60px;
+      align-items: flex-start;
+      margin-bottom: 55px;
+      .font(17px; 400; 30px);
     }
 
     &__email {
       width: 334px;
+      height: 29px;
+      & {
+        a {
+          margin-left: 24px;
+        }
+      }
     }
 
     &__address {
       width: 334px;
+
+      & {
+        span {
+          width: 225px;
+          margin-left: 24px;
+        }
+      }
     }
 
     &__map {
       width: @table-width;
       height: 457px;
       margin-bottom: 55px;
+
+      &::after {
+        top: 139px;
+        left: 364px;
+      }
     }
 
     &__img {
