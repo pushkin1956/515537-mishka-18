@@ -1,13 +1,31 @@
 .field-tel {
+  position: relative;
   display: flex;
   flex-direction: column;
+  margin-bottom: 33px;
 
   &__field {
-    margin-bottom: 30px;
+    border: none;
+    border-bottom: 2px solid #000000;
+    padding-top: 17px;
+    padding-bottom: 13px;
+    .font(19px; 400; 18px);
+
+    &::placeholder {
+      color: rgba(68, 68, 68, 0.3);
+    }
   }
 
-  &__legend {
-    margin-bottom: 25px;
+  &__icon {
+    position: absolute;
+
+    top: 33px;
+    right: 8px;
+
+    width: 25px;
+    height: 24px;
+
+    opacity: 0.2;
   }
 }
 

@@ -1,11 +1,38 @@
 .fieldset-type {
+  margin-bottom: 44px;
+
+  &__legend {
+    margin-bottom: 34px;
+  }
+
   &__option {
-    height: 45px; /*временно*/
-    margin-bottom: 25px;
+    position: relative;
+    display: flex;
+
+    &:not(:last-child) {
+      margin-bottom: 24px;
+    }
   }
 
   &__label {
+    display: block;
     padding-left: 62px;
+  }
+
+  &__indicator {
+    .pm-zero();
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+
+    top: -10px;
+    left: 0;
+
+    width: 39px;
+    height: 39px;
+
+    border: 2px solid #444444;
+    border-radius: 50%;
   }
 }
 

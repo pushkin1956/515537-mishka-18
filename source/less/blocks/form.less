@@ -8,13 +8,27 @@
   }
 
   &__legend {
+    position: relative;
     .font(17px; 700; 16px);
     color: @legend-color;
+    text-transform: uppercase;
+
+    &::after {
+      content: "";
+
+      position: absolute;
+      top: 7px;
+      left: 62px;
+
+      width: 198px;
+      height: 1px;
+
+      background-color: #63d1bb;
+    }
   }
 
   &__list {
     .pm-zero();
-    padding-top: 42px;
     list-style: none;
   }
 
@@ -24,12 +38,13 @@
 
   &__notice {
     .pm-zero();
-    margin-bottom: 30px;
+    margin-left: -1px;
+    margin-bottom: 31px;
+    .font(14px; 400; 16px);
   }
 
   &__button {
-    width: 260px;
-    height: 52px; /*временно*/
+    .button(260px);
     margin-bottom: 55px;
   }
 }
