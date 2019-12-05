@@ -21,6 +21,19 @@
       color: rgba(68, 68, 68, 0.3);
     }
   }
+
+  &__field:hover {
+    border-color: #63d1bb;
+  }
+
+  &__field:active,
+  &__field:focus {
+    border-color: #63d1bb;
+
+    &::placeholder {
+      color: rgba(0, 0, 0, 1);
+    }
+  }
 }
 
 @media (min-width: @table-width) {

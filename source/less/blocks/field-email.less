@@ -33,6 +33,28 @@
 
     opacity: 0.2;
   }
+
+  &__field:hover {
+    border-color: #63d1bb;
+  }
+
+  &__field:active,
+  &__field:focus {
+    border-color: #63d1bb;
+
+    &::placeholder {
+      color: rgba(0, 0, 0, 1);
+    }
+  }
+
+  &__field:hover ~ &__icon,
+  &__field:focus ~ &__icon,
+  &__field:active ~ &__icon {
+    opacity: 1;
+    path {
+      fill: #63d1bb;
+    }
+  }
 }
 
 @media (min-width: @table-width) {

@@ -46,6 +46,17 @@
   &__button {
     .button(260px);
     margin-bottom: 55px;
+
+    &:hover,
+    &:focus {
+      cursor: pointer;
+      background-color: #444444;
+      color: rgba(255, 255, 255, 1);
+    }
+
+    &:active {
+      color: rgba(255, 255, 255, 0.3);
+    }
   }
 }
 
