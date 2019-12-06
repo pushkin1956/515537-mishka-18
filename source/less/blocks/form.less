@@ -62,8 +62,19 @@
 
 @media (min-width: @table-width) {
   .form {
-    position: relative;
-    .container(668px; 50px);
+    width: 100%;
+    padding: 0;
+
+    &__wrapper {
+      background-color: @bg-block-dark;
+    }
+
+    &__wrapper--center {
+      position: relative;
+      .container(668px; 50px);
+      margin: 0 auto;
+      background-color: none;
+    }
 
     &__legend::after {
       display: none;
