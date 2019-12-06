@@ -53,19 +53,24 @@
 
 @media (min-width: @table-width) {
   .field-tel {
+    margin-bottom: 19px;
     background-color: @bg-block-dark;
     flex-direction: row;
-
-    &__legend {
-      .m-top();
-      margin-bottom: 0;
-    }
+    align-items: baseline;
 
     &__field {
-      height: 50px; /*Временно*/
+      box-sizing: border-box;
       width: 500px;
       margin-top: 45px;
       margin-left: auto;
+      padding-top: 16px;
+      padding-left: 16px;
+      background-color: #f1f1f1;
+    }
+
+    &__icon {
+      top: 61px;
+      right: 26px;
     }
   }
 }

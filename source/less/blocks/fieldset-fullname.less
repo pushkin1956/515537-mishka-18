@@ -41,13 +41,37 @@
 
 @media (min-width: @table-width) {
   .fieldset-fullname {
+    margin-bottom: 0;
+
     &__legend {
       position: relative;
-      .pos-top();
+      top: 25px;
+    }
+
+    &__list {
+      margin-top: -40px;
     }
 
     &__option {
-      height: 50px; /*временно*/
+      flex-direction: row;
+      align-items: baseline;
+
+      &:not(:last-child) {
+        margin-bottom: 21px;
+      }
+    }
+
+    &__label {
+      font-size: 19px;
+    }
+
+    &__field {
+      flex-grow: 1;
+      margin-left: 24px;
+      padding-left: 16px;
+      padding-top: 14px;
+      padding-bottom: 13px;
+      font-size: 19px;
     }
   }
 }

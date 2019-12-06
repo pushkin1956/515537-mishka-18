@@ -59,19 +59,26 @@
 
 @media (min-width: @table-width) {
   .field-email {
+    margin-bottom: 50px;
     background-color: @bg-block-dark;
     flex-direction: row;
-
-    &__legend {
-      margin-top: 12px;
-      margin-bottom: 0;
-    }
+    align-items: baseline;
 
     &__field {
-      height: 50px;
+      box-sizing: border-box;
       width: 500px;
+      padding-top: 16px;
+      padding-left: 16px;
+      padding-bottom: 13px;
       margin-bottom: 50px;
       margin-left: auto;
+      font-size: 19px;
+      background-color: #f1f1f1;
+    }
+
+    &__icon {
+      top: 16px;
+      right: 22px;
     }
   }
 }

@@ -65,18 +65,25 @@
     position: relative;
     .container(668px; 50px);
 
+    &__legend::after {
+      display: none;
+    }
+
     &__list {
       width: 500px;
       margin-left: auto;
+      margin-top: -18px;
       margin-bottom: 50px;
     }
 
     &__notice {
       position: absolute;
       right: 50px;
-      bottom: 70px;
-      width: 300px;
+      bottom: 63px;
+      width: 335px;
       margin-bottom: 0;
+      .font(17px; 400; 30px);
+      text-align: right;
     }
 
     &__button {

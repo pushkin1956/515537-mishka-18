@@ -78,17 +78,53 @@
 
     &__legend {
       position: relative;
-      .pos-top();
+      top: 76px;
     }
 
     &__list {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
+      padding-top: 40px;
+      margin-bottom: 11px;
     }
 
     &__option {
-      width: 250px;
+      width: 238px;
+
+      &:not(:last-child) {
+        margin-bottom: 58px;
+      }
+    }
+
+    &__label {
+      padding-left: 80px;
+      font-size: 19px;
+    }
+
+
+    &__indicator {
+      top: -15px;
+      left: -1px;
+
+      width: 54px;
+      height: 52px;
+    }
+
+    &__field:checked ~ &__indicator::after {
+      top: 28px;
+      left: 7px;
+
+      width: 15px;
+      height: 2px;
+    }
+
+    &__field:checked ~ &__indicator::before {
+      top: 24px;
+      left: 15px;
+
+      width: 29px;
+      height: 2px;
     }
   }
 }
