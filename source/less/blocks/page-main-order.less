@@ -60,15 +60,23 @@
 
 @media (min-width: @desktop-width) {
   .page-main-order {
-    span {
-      height: 235px; /*временно для сетки*/
+    &__title {
+      span {
       width: 1050px;
+      .font(53px; 700; 57px);
+      padding-bottom: 116px;
+
+        &::after {
+          height: 34px;
+          background-size: 1150px 34px;
+        }
+      }
     }
 
     &__description {
       .container(700px; 225px);
-      padding-top: 80px;
-      padding-bottom: 60px;
+      padding-top: 109px;
+      padding-bottom: 25px;
     }
   }
 }
