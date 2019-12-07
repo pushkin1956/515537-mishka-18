@@ -15,32 +15,31 @@
   }
 
   &__label {
-    display: block;
+    position: relative;
     padding-left: 62px;
+
+    &::before {
+      box-sizing: border-box;
+      content: "";
+      position: absolute;
+
+      top: -10px;
+      left: 0;
+
+      width: 40px;
+      height: 40px;
+
+      border: 2px solid #444444;
+      border-radius: 50%;
+    }
   }
 
-  &__indicator {
-    .pm-zero();
-    box-sizing: border-box;
-    display: block;
-    position: absolute;
-
-    top: -10px;
-    left: 0;
-
-    width: 40px;
-    height: 40px;
-
-    border: 2px solid #444444;
-    border-radius: 50%;
-  }
-
-  &__field:checked ~ &__indicator::before {
+  &__field:checked ~ &__label::after {
     content: "";
 
     position: absolute;
-    top: 10px;
-    left: 10px;
+    top: 2px;
+    left: 12px;
 
     width: 16px;
     height: 16px;
@@ -52,15 +51,13 @@
   &__label:hover,
   &__label:focus {
     cursor: pointer;
+
+    &::before {
+      border-color: #62d1ba;
+    }
   }
 
-  &__label:hover ~ &__indicator,
-  &__label:focus ~ &__indicator {
-    border-color: #62d1ba;
-  }
-
-  &__label:active ~ &__indicator,
-  &__label:active ~ &__indicator::before, {
+  &__label:active::before, {
     border-color: rgba(0, 0, 0, 0.3);
   }
 }
@@ -86,22 +83,22 @@
     &__label {
       padding-left: 80px;
       font-size: 19px;
+
+      &::before {
+        top: -16px;
+        left: 0;
+
+        width: 52px;
+        height: 52px;
+      }
     }
 
-    &__indicator {
-      top: -16px;
-      left: 0;
+    &__field:checked ~ &__label::after {
+      top: 0;
+      left: 16px;
 
-      width: 52px;
-      height: 52px;
-    }
-
-    &__field:checked ~ &__indicator::before {
-      top: 13px;
-      left: 13px;
-
-      width: 22px;
-      height: 22px;
+      width: 21px;
+      height: 21px;
     }
   }
 }
