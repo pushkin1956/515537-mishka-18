@@ -65,6 +65,7 @@
   &__video {
     position: relative;
     left: -1px;
+    .bg-img("../../img/video-mobile@1x.jpg");
   }
 
   &__description {
@@ -113,7 +114,10 @@
     &__video {
       width: 668px;
       height: 455px;
+      top: -1px;
       order: -2;
+      border-bottom: 1px solid rgba(229, 229, 229, 1);
+      .bg-img("../../img/video-tablet@1x.jpg");
     }
 
     &__title {
@@ -171,6 +175,8 @@
       top: 0;
       left: 50px;
       width: 682px;
+      .bg-img("../../img/video-desktop@1x.jpg");
+      border: none;
     }
 
     &__title {
