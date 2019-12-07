@@ -1,44 +1,106 @@
 .field-email {
+  position: relative;
   display: flex;
   flex-direction: column;
+  margin-bottom: 33px;
 
-  &__field {
-    margin-bottom: 30px;
+  &__legend::after {
+    left: 82px;
+
+    width: 178px;
   }
 
-  &__legend {
-    margin-bottom: 25px;
+  &__field {
+    border: none;
+    border-bottom: 2px solid #000000;
+    padding-top: 22px;
+    padding-bottom: 16px;
+    .font(17px; 400; 18px);
+
+    &::placeholder {
+      color: rgba(68, 68, 68, 0.3);
+    }
+  }
+
+  &__icon {
+    position: absolute;
+
+    top: 33px;
+    right: 4px;
+
+    width: 32px;
+    height: 32px;
+
+    opacity: 0.2;
+  }
+
+  &__field:hover {
+    border-color: #63d1bb;
+  }
+
+  &__field:active,
+  &__field:focus {
+    border-color: #63d1bb;
+
+    &::placeholder {
+      color: rgba(0, 0, 0, 1);
+    }
+  }
+
+  &__field:hover ~ &__icon,
+  &__field:focus ~ &__icon,
+  &__field:active ~ &__icon {
+    opacity: 1;
+
+    path {
+      fill: #63d1bb;
+    }
   }
 }
 
 @media (min-width: @table-width) {
   .field-email {
-    background-color: @bg-block-dark;
+    .container(668px; 50px);
+    margin: 0 auto;
+    margin-bottom: 50px;
     flex-direction: row;
-
-    &__legend {
-      margin-top: 12px;
-      margin-bottom: 0;
-    }
+    align-items: baseline;
 
     &__field {
-      height: 50px;
+      box-sizing: border-box;
       width: 500px;
+      padding-top: 16px;
+      padding-left: 16px;
+      padding-bottom: 13px;
       margin-bottom: 50px;
       margin-left: auto;
+      font-size: 19px;
+      background-color: #f1f1f1;
+    }
+
+    &__icon {
+      top: 16px;
+      right: 72px;
     }
   }
 }
 
 @media (min-width: @desktop-width) {
   .field-email {
+    .container(1050px; 50px);
+
     &__legend {
-      .m-left();
+      margin-left: 62px;
     }
 
     &__field {
       width: 700px;
       margin-right: 175px;
+    }
+
+    &__icon {
+      top: 16px;
+      right: 229px;
     }
   }
 }

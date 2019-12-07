@@ -1,57 +1,152 @@
 .production {
   .container(260px; 30px);
-  padding-bottom: 33px;
+  .center(260px);
   margin: 0 auto;
-  margin-bottom: 59px;
+  margin-bottom: 58px;
+
+  &__wrapper {
+    position: relative;
+    box-sizing: border-box;
+    border: 1px solid rgba(229, 229, 229, 1);
+
+
+    &::before {
+      content: "";
+
+      position: absolute;
+
+      top: 132px;
+      left: 80px;
+      z-index: 1;
+
+      width: 101px;
+      height: 77px;
+      .bg-img("../../img/icon-play.svg");
+    }
+
+    &:hover,
+    &:focus {
+      cursor: pointer;
+      box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  &:active {
+    .item__header-box {
+      box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
+    }
+  }
 
   &__title {
+    position: relative;
+    width: 130px;
     .pm-zero();
-    padding-top: 25px;
-    padding-bottom: 25px;
+    margin-left: auto;
+    margin-right: 40px;
+    padding-top: 24px;
+    padding-bottom: 23px;
+    padding-left: 60px;
     .font(17px; 700; 24px);
+
+    &::before {
+      content: "";
+
+      position: absolute;
+
+      top: 29px;
+      left: 5px;
+
+      width: 32px;
+      height: 32px;
+      .bg-img("../../img/icon-video.svg");
+    }
+  }
+
+  &__video {
+    position: relative;
+    left: -1px;
+    .bg-img("../../img/video-mobile@1x.jpg");
   }
 
   &__description {
     .pm-zero();
-    padding-top: 34px;
-    padding-bottom: 28px;
+    padding-top: 21px;
+    padding-right: 42px;
+    padding-bottom: 25px;
+    padding-left: 33px;
     font-size: 13px;
   }
 
   &__order {
     display: block;
-    height: 52px; /*временно*/
-    width: 192px;
+    .button(193px);
     margin: 0 auto;
+    margin-bottom: 32px;
+
+    &:hover,
+    &:focus {
+      cursor: pointer;
+      background-color: #444444;
+      color: rgba(255, 255, 255, 1);
+    }
+
+    &:active {
+      color: rgba(255, 255, 255, 0.3);
+    }
   }
 }
 
 @media (min-width: @table-width) {
   .production {
     .container(668px; 50px);
-    display: flex;
-    flex-direction: column;
+    margin-bottom: 63px;
+
+    &__wrapper {
+      display: flex;
+      flex-direction: column;
+
+      &::before {
+        top: 189px;
+        left: 283px;
+      }
+    }
 
     &__video {
       width: 668px;
       height: 455px;
+      top: -1px;
       order: -2;
+      border-bottom: 1px solid rgba(229, 229, 229, 1);
+      .bg-img("../../img/video-tablet@1x.jpg");
     }
 
     &__title {
       order: -1;
-      margin-left: 42px;
+      width: auto;
+      margin-left: 41px;
       margin-right: 42px;
-      padding-left: 65px;
+      padding-top: 38px;
+      padding-left: 63px;
+      padding-bottom: 32px;
+      .font(20px; 700; 24px);
+
+      &::before {
+        top: 33px;
+        left: 0;
+      }
     }
 
     &__description {
-      margin-left: 42px;
+      .pm-zero();
+      margin-left: 39px;
       margin-right: 42px;
+      margin-bottom: 35px;
+      .font(15px; 400; 30px);
     }
 
     &__order {
       width: 584px;
+      margin-bottom: 45px;
     }
   }
 }
@@ -60,34 +155,54 @@
   .production {
     position: relative;
     width: 1050px;
-    padding-bottom: 60px;
-    align-items: flex-end;
+    padding-bottom: 42px;
+    display: flex;
+    justify-content: flex-end;
+
+
+    &__wrapper {
+      position: static;
+      padding-left: 77px;
+
+      &::before {
+        left: 340px;
+      }
+    }
 
     &__video {
       position: absolute;
+
       top: 0;
       left: 50px;
-      width: 683px;
+      width: 682px;
+      .bg-img("../../img/video-desktop@1x.jpg");
+      border: none;
     }
 
     &__title {
-      width: 290px;
+      width: 150px;
       .pm-zero();
       margin-top: 40px;
-      height: 105px; /*временно*/
+      margin-right: 139px;
+      margin-bottom: 32px;
+      padding-top: 55px;
+
+      &::before {
+        top: 1px;
+        left: 2px;
+      }
     }
 
     &__description {
-      width: 290px;
-      height: 116px; /*временно*/
-      padding-bottom: 50px;
+      width: 289px;
+      padding-bottom: 47px;
       margin: 0;
     }
 
     &__order {
       width: 230px;
-      margin: 0;
-      margin-right: 60px;
+      margin-right: 57px;
+      margin-bottom: 59px;
     }
   }
 }

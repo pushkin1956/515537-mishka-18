@@ -8,13 +8,27 @@
   }
 
   &__legend {
+    position: relative;
     .font(17px; 700; 16px);
     color: @legend-color;
+    text-transform: uppercase;
+
+    &::after {
+      content: "";
+
+      position: absolute;
+      top: 7px;
+      left: 62px;
+
+      width: 198px;
+      height: 1px;
+
+      background-color: #63d1bb;
+    }
   }
 
   &__list {
     .pm-zero();
-    padding-top: 42px;
     list-style: none;
   }
 
@@ -24,33 +38,63 @@
 
   &__notice {
     .pm-zero();
-    margin-bottom: 30px;
+    margin-left: -1px;
+    margin-bottom: 31px;
+    .font(14px; 400; 16px);
   }
 
   &__button {
-    width: 260px;
-    height: 52px; /*временно*/
+    .button(260px);
     margin-bottom: 55px;
+
+    &:hover,
+    &:focus {
+      cursor: pointer;
+      background-color: #444444;
+      color: rgba(255, 255, 255, 1);
+    }
+
+    &:active {
+      color: rgba(255, 255, 255, 0.3);
+    }
   }
 }
 
 @media (min-width: @table-width) {
   .form {
-    position: relative;
-    .container(668px; 50px);
+    width: 100%;
+    padding: 0;
+
+    &__wrapper {
+      background-color: @bg-block-dark;
+    }
+
+    &__wrapper--center {
+      position: relative;
+      .container(668px; 50px);
+      margin: 0 auto;
+      background-color: none;
+    }
+
+    &__legend::after {
+      display: none;
+    }
 
     &__list {
       width: 500px;
       margin-left: auto;
+      margin-top: -18px;
       margin-bottom: 50px;
     }
 
     &__notice {
       position: absolute;
       right: 50px;
-      bottom: 70px;
-      width: 300px;
+      bottom: 63px;
+      width: 335px;
       margin-bottom: 0;
+      .font(17px; 400; 30px);
+      text-align: right;
     }
 
     &__button {
@@ -62,11 +106,13 @@
 
 @media (min-width: @desktop-width) {
   .form {
-    .container(1050px; 50px);
-
     &__list {
-      width: 735px;
-      margin-right: 140px;
+      width: 789px;
+      margin-left: 176px;
+    }
+
+    &__wrapper--center {
+      .container(1050px; 50px);
     }
 
     &__notice {
