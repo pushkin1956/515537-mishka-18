@@ -29,6 +29,11 @@
       opacity: 1;
     }
   }
+
+  &__logo-image {
+    width: 86px;
+    height: 35px;
+  }
 }
 
 @media (min-width: @table-width) {
@@ -39,9 +44,15 @@
 
     &__logo {
       position: absolute;
+      width: 112px;
       height: 46px;
       padding: 21.5px 0;
-      margin-left: 0;
+      margin-left: -1px;
+    }
+
+    &__logo-image {
+      width: 112px;
+      height: 46px;
     }
   }
 }
@@ -53,8 +64,16 @@
     }
 
     &__logo {
+      width: 148px;
+      height: 73px;
+      top: -13px;
       left: 50%;
-      margin-left: -57.5px; /*временно*/
+      margin-left: -74px;
+    }
+
+    &__logo-image {
+      width: 148px;
+      height: 73px;
     }
   }
 }

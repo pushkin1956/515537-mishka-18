@@ -103,9 +103,14 @@
       display: flex;
     }
 
-    &__image {
+    &__image-box {
       width: 334px;
       height: 334px;
+    }
+
+    &__image {
+      width: 334px;
+      height: auto;
     }
 
     &__header {
@@ -149,17 +154,21 @@
     }
 
     &__header-box {
-      margin-top: -7px;
       border-left: 1px solid rgba(229, 229, 229, 1);
     }
 
     &__link {
-      display: block;
+      flex-direction: column;
+    }
+
+    &__image-box {
+      width: 316px;
+      height: 462px;
     }
 
     &__image {
-      width: 315px;
-      height: 462px;
+      width: 316px;
+      height: auto;
     }
 
     &__header {
