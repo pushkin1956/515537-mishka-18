@@ -6,13 +6,13 @@
 
   &__field {
     border: none;
-    border-bottom: 2px solid #000000;
+    border-bottom: 2px solid @border-dark;
     padding-top: 17px;
     padding-bottom: 13px;
     .font(19px; 400; 18px);
 
     &::placeholder {
-      color: rgba(68, 68, 68, 0.3);
+      color: @placeholder;
     }
   }
 
@@ -29,15 +29,15 @@
   }
 
   &__field:hover {
-    border-color: #63d1bb;
+    border-color: @main-contrast;
   }
 
   &__field:active,
   &__field:focus {
-    border-color: #63d1bb;
+    border-color: @main-contrast;
 
     &::placeholder {
-      color: rgba(0, 0, 0, 1);
+      color: @placeholder-act;
     }
   }
 
@@ -47,18 +47,18 @@
     opacity: 1;
 
     path {
-      fill: #63d1bb;
+      fill: @main-contrast;
     }
   }
 }
 
 @media (min-width: @table-width) {
   .field-tel {
+    flex-direction: row;
+    align-items: baseline;
     .container(668px; 50px);
     margin: 0 auto;
     margin-bottom: 19px;
-    flex-direction: row;
-    align-items: baseline;
 
     &__field {
       box-sizing: border-box;
@@ -67,7 +67,7 @@
       margin-left: auto;
       padding-top: 16px;
       padding-left: 16px;
-      background-color: #f1f1f1;
+      background-color: @bg-block-dark;
     }
 
     &__icon {

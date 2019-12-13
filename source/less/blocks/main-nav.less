@@ -3,12 +3,11 @@
   .center(320px);
 
   &__toggle {
-    .pm-zero();
     position: absolute;
     top: -80px;
     right: 0;
-
     display: block;
+    .pm-zero();
     width: 80px;
     height: 80px;
 
@@ -29,8 +28,8 @@
       width: 20px;
       height: 2px;
 
-      background-color: #221f1f;
-      box-shadow: 0 6px 0 0 #221f1f, 0 12px 0 0 #221f1f;
+      background-color: @toggle-color;
+      box-shadow: 0 6px 0 0 @toggle-color, 0 12px 0 0 @toggle-color;
     }
 
     &:hover::before,
@@ -55,7 +54,7 @@
       width: 27px;
       height: 2px;
 
-      background-color: #221f1f;
+      background-color: @toggle-color;
     }
 
     &::before {

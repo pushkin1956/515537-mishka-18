@@ -16,7 +16,7 @@
     .pm-zero();
     .font(17px; 700; 20px);
     text-transform: uppercase;
-    color: @title-week;
+    color: @main-contrast;
   }
 
   &__title-product {
@@ -39,8 +39,8 @@
 
   &__price {
     .pm-zero();
-    .font(17px; 700; 24px);
     margin-bottom: 25px;
+    .font(17px; 700; 24px);
     text-align: center;
   }
 
@@ -50,14 +50,14 @@
 
   &__order:hover,
   &__order:focus {
-    background-color: #444444;
-    color: rgba(255, 255, 255, 1);
+    background-color: @btn-color;
+    color: @btn-color-hov;
 
     cursor: pointer;
   }
 
   &__order:active {
-    color: rgba(255, 255, 255, 0.3);
+    color: @btn-color-act;
   }
 
   &::after {
@@ -100,31 +100,31 @@
     }
 
     &__title-product {
+      margin-left: -3px;
       padding-top: 40px;
       padding-bottom: 0;
-      margin-left: -3px;
       .font(43px; 700; 50px);
     }
 
     &__image {
       position: absolute;
-      width: 334px;
-      height: 404px;
       bottom: 63px;
       right: 50px;
+      width: 334px;
+      height: 404px;
       margin: 0;
     }
 
     &__description {
       width: 290px;
-      .font(17px; 400; 30px);
       margin-bottom: 35px;
+      .font(17px; 400; 30px);
     }
 
     &__price {
       width: 290px;
-      font-size: 20px;
       margin-bottom: 35px;
+      font-size: 20px;
     }
 
     &__order {
@@ -147,9 +147,9 @@
     padding-bottom: 90px;
 
     &__header {
-      width: 1050px;
       flex-direction: row-reverse;
       justify-content: flex-end;
+      width: 1050px;
     }
 
     &__title {
@@ -158,10 +158,10 @@
     }
 
     &__title-product {
+      z-index: 1;
       padding-top: 118px;
       font-size: 53px;
       line-height: 57px;
-      z-index: 1;
     }
 
     &__image {

@@ -15,26 +15,26 @@
   }
 
   &__field {
-    border: none;
-    border-bottom: 2px solid #000000;
     padding: 16px 0;
     .font(17px; 400; 18px);
+    border: none;
+    border-bottom: 2px solid @border-dark;
 
     &::placeholder {
-      color: rgba(68, 68, 68, 0.3);
+      color: @placeholder;
     }
   }
 
   &__field:hover {
-    border-color: #63d1bb;
+    border-color: @main-contrast;
   }
 
   &__field:active,
   &__field:focus {
-    border-color: #63d1bb;
+    border-color: @main-contrast;
 
     &::placeholder {
-      color: rgba(0, 0, 0, 1);
+      color: @placeholder-act;
     }
   }
 }

@@ -9,7 +9,7 @@
   }
 
   &__item--interior {
-    background-color: @bg-title-light;
+    background-color: @main-contrast;
 
     &::before {
       content: "";
@@ -27,7 +27,7 @@
 
     &:hover,
     &:focus {
-      box-shadow: 0 -5px 0 0 @bg-title-light;
+      box-shadow: 0 -5px 0 0 @main-contrast;
 
       .product-list__title {
         padding-top: 21px;
@@ -42,7 +42,7 @@
   }
 
   &__item--toy {
-    background-color: @bg-title-dark;
+    background-color: @main-contrast-dark;
 
     &::before {
       content: "";
@@ -60,7 +60,7 @@
 
     &:hover,
     &:focus {
-      box-shadow: 0 -5px 0 0 @bg-title-dark;
+      box-shadow: 0 -5px 0 0 @main-contrast-dark;
 
       .product-list__title {
         padding-top: 21px;
@@ -85,6 +85,7 @@
   }
 
   &__title {
+    z-index: 0;
     width: 130px;
     .pm-zero();
     padding-top: 26px;
@@ -92,7 +93,6 @@
     padding-left: 29px;
     .font(19px; 700; 24px);
     color: @title-color;
-    z-index: 0;
   }
 }
 
