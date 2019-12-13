@@ -9,39 +9,39 @@
   &__field {
     box-sizing: border-box;
     .pm-zero();
-    height: 142px;
     width: 260px;
+    height: 142px;
+    margin-bottom: 16px;
     padding-top: 14px;
     padding-left: 14px;
-    margin-bottom: 16px;
     .font(17px; 400; 18px);
-    border: 2px solid #444444;
+    border: 2px solid @input-border;
 
     &::placeholder {
-      color: rgba(68, 68, 68, 0.3);
+      color: @placeholder;
     }
   }
 
   &__field:hover {
-    border-color: #63d1bb;
+    border-color: @main-contrast;
   }
 
   &__field:active,
   &__field:focus {
-    border-color: #63d1bb;
+    border-color: @main-contrast;
 
     &::placeholder {
-      color: rgba(0, 0, 0, 1);
+      color: @placeholder-act;
     }
   }
 }
 
 @media (min-width: @table-width) {
   .field-info {
-    .container(668px; 50px);
-    margin: 0 auto;
     flex-direction: row;
     align-items: baseline;
+    .container(668px; 50px);
+    margin: 0 auto;
     margin-bottom: 37px;
 
     &__field {

@@ -5,22 +5,22 @@
 
   &__header-box {
     margin-top: -7px;
-    border: 1px solid rgba(229, 229, 229, 1);
+    border: 1px solid @border-color;
   }
 
   &__header {
-    padding-top: 28px;
-    padding-bottom: 22px;
     margin-left: 28px;
     margin-right: 28px;
     margin-bottom: 20px;
-    border-bottom: 1px solid rgba(229, 229, 229, 1);
+    padding-top: 28px;
+    padding-bottom: 22px;
+    border-bottom: 1px solid @border-color;
   }
 
   &__title {
     .pm-zero();
-    .font(17px; 700; 24px);
     margin-bottom: 7px;
+    .font(17px; 700; 24px);
   }
 
   &__description {
@@ -44,9 +44,7 @@
     width: 20px;
     height: 19px;
 
-    path {
-      fill: rgba(0, 0, 0, 0.2);
-    }
+    opacity: 0.2;
   }
 
   &:hover,
@@ -54,13 +52,13 @@
     cursor: pointer;
 
     .item__header-box {
-      box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
+      box-shadow: 0 6px 10px 0 @box-shadow;
     }
   }
 
   &:active {
     .item__header-box {
-      box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
+      box-shadow: 0 3px 5px 0 @box-shadow;
     }
   }
 
@@ -75,8 +73,9 @@
 
   &:hover &__icon,
   &:focus &__icon {
+    opacity: 1;
     path {
-      fill: #63d1bb;
+      fill: @main-contrast;
     }
   }
 
@@ -92,11 +91,11 @@
     }
 
     &__header-box {
-      margin-top: 0;
-      border-left: none;
       display: flex;
       justify-content: space-between;
       flex-direction: column;
+      margin-top: 0;
+      border-left: none;
     }
 
     &__link {
@@ -116,15 +115,15 @@
     &__header {
       width: 306px;
       .pm-zero();
-      padding-top: 25px;
       margin-left: 26px;
+      padding-top: 25px;
       border: none;
     }
 
     &__title {
       width: 230px;
-      .font(20px; 700; 24px);
       margin-bottom: 5px;
+      .font(20px; 700; 24px);
     }
 
     &__description {
@@ -138,7 +137,7 @@
       margin-bottom: 25px;
       padding-top: 23px;
       .font(17px; 700; 24px);
-      border-top: 1px solid rgba(229, 229, 229, 1);
+      border-top: 1px solid @border-color;
     }
 
     &__icon {
@@ -154,7 +153,7 @@
     }
 
     &__header-box {
-      border-left: 1px solid rgba(229, 229, 229, 1);
+      border-left: 1px solid @border-color;
     }
 
     &__link {

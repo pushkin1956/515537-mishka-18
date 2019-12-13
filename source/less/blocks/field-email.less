@@ -11,14 +11,14 @@
   }
 
   &__field {
-    border: none;
-    border-bottom: 2px solid #000000;
     padding-top: 22px;
     padding-bottom: 16px;
     .font(17px; 400; 18px);
+    border: none;
+    border-bottom: 2px solid @border-dark;
 
     &::placeholder {
-      color: rgba(68, 68, 68, 0.3);
+      color: @placeholder;
     }
   }
 
@@ -35,15 +35,15 @@
   }
 
   &__field:hover {
-    border-color: #63d1bb;
+    border-color: @main-contrast;
   }
 
   &__field:active,
   &__field:focus {
-    border-color: #63d1bb;
+    border-color: @main-contrast;
 
     &::placeholder {
-      color: rgba(0, 0, 0, 1);
+      color: @placeholder-act;
     }
   }
 
@@ -53,29 +53,29 @@
     opacity: 1;
 
     path {
-      fill: #63d1bb;
+      fill: @main-contrast;
     }
   }
 }
 
 @media (min-width: @table-width) {
   .field-email {
+    flex-direction: row;
+    align-items: baseline;
     .container(668px; 50px);
     margin: 0 auto;
     margin-bottom: 50px;
-    flex-direction: row;
-    align-items: baseline;
 
     &__field {
       box-sizing: border-box;
       width: 500px;
+      margin-bottom: 50px;
+      margin-left: auto;
       padding-top: 16px;
       padding-left: 16px;
       padding-bottom: 13px;
-      margin-bottom: 50px;
-      margin-left: auto;
       font-size: 19px;
-      background-color: #f1f1f1;
+      background-color: @bg-block-dark;
     }
 
     &__icon {

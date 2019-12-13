@@ -1,6 +1,6 @@
 .copyright {
   position: relative;
-  .center(185px);
+  .center(183px);
 
   &__link {
     display: block;
@@ -9,7 +9,7 @@
     &:focus {
       .copyright__logo {
         path {
-          fill: @icon-color;
+          fill: @link-contrast;
         }
       }
     }
@@ -21,16 +21,16 @@
 
   &__text {
     display: block;
-    .font(19px; 700; 18px);
-    color: @link-color;
     padding-top: 27px;
     padding-bottom: 33px;
+    .font(19px; 700; 18px);
+    color: @link-color;
   }
 
   &__logo {
     position: absolute;
     top: 22px;
-    right: 0;
+    right: 1px;
 
     width: 27px;
     height: 34px;
@@ -44,5 +44,13 @@
 @media (min-width: @table-width) {
   .copyright {
     margin: 0;
+
+    &__text {
+      padding-bottom: 25px;
+    }
+
+    &__logo {
+    right: -1px;
+    }
   }
 }
