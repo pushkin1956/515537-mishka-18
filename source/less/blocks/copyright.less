@@ -2,15 +2,17 @@
   position: relative;
   .center(183px);
 
+  &__logo {
+    fill: @main-contrast;
+  }
+
   &__link {
     display: block;
 
     &:hover,
     &:focus {
       .copyright__logo {
-        path {
-          fill: @link-contrast;
-        }
+        fill: @link-contrast;
       }
     }
 
