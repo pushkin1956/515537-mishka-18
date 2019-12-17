@@ -9,7 +9,9 @@
     border-bottom: 2px solid @border-dark;
     padding-top: 17px;
     padding-bottom: 13px;
+    padding-right: 45px;
     .font(19px; 400; 18px);
+    background-color: transparent;
 
     &::placeholder {
       color: @placeholder;
@@ -18,6 +20,7 @@
 
   &__icon {
     position: absolute;
+    z-index: -1;
 
     top: 33px;
     right: 8px;
@@ -45,10 +48,7 @@
   &__field:focus ~ &__icon,
   &__field:active ~ &__icon {
     opacity: 1;
-
-    path {
-      fill: @main-contrast;
-    }
+    fill: @main-contrast;
   }
 }
 
