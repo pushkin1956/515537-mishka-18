@@ -18,7 +18,7 @@ var svgstore = require("gulp-svgstore");
 var posthtml = require("gulp-posthtml");
 var include = require("posthtml-include");
 
-var del = require("gulp-del");
+var del = require("del");
 
 gulp.task("css", function () {
   return gulp.src("source/less/style.less")
