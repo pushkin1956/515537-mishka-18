@@ -70,7 +70,7 @@ gulp.task("html", function () {
 
 gulp.task("server", function () {
   server.init({
-    server: "source/",
+    server: "build/",
     notify: false,
     open: true,
     cors: true,
@@ -78,7 +78,8 @@ gulp.task("server", function () {
   });
 
   gulp.watch("source/less/**/*.less", gulp.series("css"));
-  gulp.watch("source/*.html").on("change", server.reload);
+  gulp.watch("source/img/icon-*.svg", gulp.series("sprite", "html", "refresh"));
+  gulp.watch("source/*.html", gulp.series("html", "refresh"));
 });
 
 gulp.task("copy", function () {
@@ -104,5 +105,10 @@ gulp.task("build", gulp.series(
   "sprite",
   "html"
 ));
+
+gulp.task("refresh", function(done) {
+  server.reload();
+  done();
+});
 
 gulp.task("start", gulp.series("build", "server"));
