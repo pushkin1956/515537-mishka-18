@@ -11,6 +11,9 @@
   }
 
   &__field {
+    position: relative;
+    z-index: 1;
+
     padding-top: 22px;
     padding-bottom: 16px;
     padding-right: 45px;
@@ -26,7 +29,6 @@
 
   &__icon {
     position: absolute;
-    z-index: -1;
 
     top: 33px;
     right: 4px;
@@ -75,7 +77,6 @@
       padding-left: 16px;
       padding-bottom: 13px;
       font-size: 19px;
-      background-color: @bg-block-dark;
     }
 
     &__icon {
