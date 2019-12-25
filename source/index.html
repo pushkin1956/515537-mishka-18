@@ -4,9 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Интернет магазин «Мишка»</title>
-  <link href="css/style.css" rel="stylesheet">
+  <link href="css/style.min.css" rel="stylesheet">
 </head>
 <body>
+  <div style="display: none">
+    <include src="build/img/sprite.svg"></include>
+  </div>
   <header class="page-header">
     <div class="page-header__wrapper">
       <a class="page-header__logo page-header__logo--main">
@@ -205,14 +208,14 @@
   <footer class="page-footer">
     <div class="page-footer__wrapper">
       <svg class="page-footer__logo" width="102px" height="34px">
-        <use xlink:href="img/sprite.svg#logo-footer"></use>
+        <use xlink:href="img/sprite.svg#icon-logo-footer"></use>
       </svg>
       <div class="page-footer__social social">
         <ul class="social__list">
           <li class="social__item">
             <a class="social__link social__link--instagram" href="#">
               <svg class="social__icon social__icon--instagram" width="22px" height="21px">
-                <use xlink:href="img/sprite.svg#icon-instagram"></use>
+                <use xlink:href="img/sprite.svg#icon-insta"></use>
               </svg>
               <span class="visually-hidden">Мы в Инстаграме</span>
             </a>
@@ -220,7 +223,7 @@
           <li class="social__item">
             <a class="social__link social__link--facebook" href="#">
               <svg class="social__icon social__icon--facebook" width="15px" height="28px">
-                <use xlink:href="img/sprite.svg#icon-facebook"></use>
+                <use xlink:href="img/sprite.svg#icon-fb"></use>
               </svg>
               <span class="visually-hidden">Мы в Фейсбуке</span>
             </a>

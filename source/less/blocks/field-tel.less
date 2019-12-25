@@ -5,6 +5,9 @@
   margin-bottom: 33px;
 
   &__field {
+    position: relative;
+    z-index: 1;
+
     border: none;
     border-bottom: 2px solid @border-dark;
     padding-top: 17px;
@@ -20,7 +23,6 @@
 
   &__icon {
     position: absolute;
-    z-index: -1;
 
     top: 33px;
     right: 8px;
@@ -67,7 +69,6 @@
       margin-left: auto;
       padding-top: 16px;
       padding-left: 16px;
-      background-color: @bg-block-dark;
     }
 
     &__icon {
