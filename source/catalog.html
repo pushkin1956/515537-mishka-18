@@ -4,7 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Каталог товаров. Интернет магазин «Мишка»</title>
-  <link href="css/style.min.css" rel="stylesheet">
+  <link rel="preload" href="fonts/opensans.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/opensansbold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
   <div style="display: none">
@@ -198,30 +200,33 @@
   </footer>
 
   <!--попапы-->
-  <section class="modal cart-add visually-hidden">
-    <h2 class="cart-add__title">Добавить в корзину</h2>
-    <form class="cart-add__form" action="https://echo.htmlacademy.ru" method="get">
-      <fieldset class="cart-add__choice choice">
-        <legend class="choice__title">Выберите размер:</legend>
-        <ul class="choice__list">
-          <li class="choice__item">
-            <input class="choice__flag" type="checkbox" name="S" id="checkbox-s">
-            <label class="choice__name" for="checkbox-s">S</label>
-          </li>
-          <li class="choice__item">
-            <input class="choice__flag" type="checkbox" name="M" id="checkbox-m">
-            <label class="choice__name" for="checkbox-m">M</label>
-          </li>
-          <li class="choice__item">
-            <input class="choice__flag" type="checkbox" name="L" id="checkbox-l">
-            <label class="choice__name" for="checkbox-l">L</label>
-          </li>
-        </ul>
-      </fieldset>
-      <button class="button cart-add__add" type="submit">Добавить</button>
-    </form>
+  <section class="cart-add cart-add--closed">
+    <div class="cart-add__wrapper">
+      <h2 class="cart-add__title">Добавить в корзину</h2>
+      <form class="cart-add__form" action="https://echo.htmlacademy.ru" method="get">
+        <fieldset class="cart-add__choice choice">
+          <legend class="choice__title">Выберите размер:</legend>
+          <ul class="choice__list">
+            <li class="choice__item">
+              <input class="visually-hidden choice__flag" type="checkbox" name="S" id="checkbox-s">
+              <label class="choice__name" for="checkbox-s">S</label>
+            </li>
+            <li class="choice__item">
+              <input class="visually-hidden choice__flag" type="checkbox" name="M" id="checkbox-m">
+              <label class="choice__name" for="checkbox-m">M</label>
+            </li>
+            <li class="choice__item">
+              <input class="visually-hidden choice__flag" type="checkbox" name="L" id="checkbox-l">
+              <label class="choice__name" for="checkbox-l">L</label>
+            </li>
+          </ul>
+        </fieldset>
+        <button class="button cart-add__add" type="submit">Добавить</button>
+      </form>
+    </div>
   </section>
 
   <script src="js/script.js"></script>
+  <script src="js/picturefill.js"></script>
 </body>
 </html>

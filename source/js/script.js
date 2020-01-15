@@ -12,3 +12,34 @@ navToggle.addEventListener('click', function() {
     navMain.classList.remove('main-nav--opened');
   }
 });
+
+var orderButton = document.querySelector('.product-week__order');
+var orderIcon = document.querySelector('.item__icon');
+
+var cartPopup = document.querySelector('.cart-add');
+var cartDialog = cartPopup.querySelector('.cart-add__wrapper');
+
+var catalogList = document.querySelector('.catalog__list');
+
+if(orderButton) {
+  orderButton.addEventListener('click', function (evt) {
+    evt.preventDefault();
+    cartPopup.classList.remove('cart-add--closed');
+  });
+} else {
+  catalogList.addEventListener('click', function (evt) {
+    evt.preventDefault();
+    if (event.target.nodeName = '.item__icon') {
+      cartPopup.classList.remove('cart-add--closed');
+    }
+  });
+}
+
+cartPopup.addEventListener('click', function (evt) {
+  evt.preventDefault();
+  cartPopup.classList.add('cart-add--closed');
+});
+
+cartDialog.addEventListener('click', function (evt) {
+  evt.stopImmediatePropagation();
+});
