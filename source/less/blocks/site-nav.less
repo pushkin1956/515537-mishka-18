@@ -37,12 +37,15 @@
     &__list {
       position: absolute;
       display: flex;
+      flex-wrap: wrap;
+      width: 334px;
     }
 
     &__link {
-      width: 167px;
+      width: 147px;
       padding: 0;
       padding-top: 17px;
+      padding-right: 20px;
       font-size: 15px;
       box-shadow: none;
     }
@@ -52,6 +55,7 @@
 @media (min-width: @desktop-width) {
   .site-nav {
     order: 0;
+        width: 445px;
 
     &__list {
       flex-wrap: wrap;
@@ -64,8 +68,9 @@
     }
 
     &__link {
-      width: 184px;
+      width: 160px;
       padding-top: 30.5px;
+      padding-right: 24px;
       padding-bottom: 34.5px;
       padding-left: 35px;
       font-size: 17px;
