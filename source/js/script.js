@@ -14,7 +14,7 @@ navToggle.addEventListener('click', function() {
 });
 
 var orderButton = document.querySelector('.product-week__order');
-var orderIcon = document.querySelector('.item__icon');
+var orderIcon = document.querySelectorAll('.item__icon');
 
 var cartPopup = document.querySelector('.cart-add');
 var cartDialog = cartPopup.querySelector('.cart-add__wrapper');
@@ -27,12 +27,11 @@ if(orderButton) {
     cartPopup.classList.remove('cart-add--closed');
   });
 } else {
-  catalogList.addEventListener('click', function (evt) {
-    evt.preventDefault();
-    if (event.target.nodeName = '.item__icon') {
+  for (var i = 0; i < orderIcon.length; i++) {
+    orderIcon[i].onclick = function() {
       cartPopup.classList.remove('cart-add--closed');
-    }
-  });
+    };
+  }
 }
 
 cartPopup.addEventListener('click', function (evt) {
